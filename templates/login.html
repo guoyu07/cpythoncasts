@@ -1,0 +1,21 @@
+
+{%extends 'layout.html'%}
+
+{%block content%}
+
+    <form method="post" action="">
+    {% csrf_token %}
+    <table>
+    <tr>
+    <td>用户名:</td>
+    <td>{{ form.username }}</td>
+    </tr>
+    <tr>
+    <td>密码</td>
+    <td>{{ form.password }}</td>
+    </tr>
+    </table>
+    <input class='btn' type="submit" value="登录" />
+    <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+{%endblock%}

@@ -1,0 +1,30 @@
+
+
+<!-- Sidebar -->
+<div class="span3 bs-docs-sidebar">
+     <ul class="nav nav-list bs-docs-sidenav affix-top">
+        <li ng-repeat="project in projects">
+            个人相关信息
+        </li>
+
+{% if teacher == "no" %}
+        <li ng-repeat="project in projects">
+		我的信息
+        </li>
+        <li ng-repeat="project in projects">
+		我的视频
+        </li>
+{%else%}
+        <li ng-repeat="project in projects">
+		<a href='{%url 'set_teacher_update' teacher.id%}'>我的信息</a>
+        </li>
+        <li ng-repeat="project in projects">
+		<a href='{%url 'set_video_list' %}'>我的视频</a>
+        </li>
+
+{%endif%}
+    </ul>
+
+</div>
+<!-- Sidebar ends -->
+
