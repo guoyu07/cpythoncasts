@@ -1,0 +1,31 @@
+{%extends 'layout.html'%}
+
+
+{%block content%}
+<div class="container">
+    <div class="content-outter">
+{%include 'account/set_left.html'%}
+</div>
+
+<div>
+    <ul>
+	<li>
+		<a class='btn' href="{% url "set_video_add"%}">添加新视频</a> 
+	</li>
+        {% for video in object_list %}
+            <li>{{ video.title }} | 
+		<a class='btn' href="{% url "set_video_update" video.id %}">修改</a> |
+		<a class='btn' href="{% url "set_video_delete" video.id %}">删除</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
+</div>
+</div>
+
+
+
+{%endblock%}
+

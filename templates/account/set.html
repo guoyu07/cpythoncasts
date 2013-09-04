@@ -1,0 +1,25 @@
+{%extends 'layout.html'%}
+
+
+{%block content%}
+<div class="container">
+    	<div class="content-outter">
+	{%include 'account/set_left.html'%}
+	</div>
+
+	<div class='span6'>
+	    <div class='well'>
+		{{uinfo.intro}}
+	    </div>
+	    <img src="{{MEDIA_URL}}{{uinfo.photo}}" width=120 height=100></img>	
+	    </p>
+	    <a class='btn' href='{%url "set_info_update" uinfo.id%}'>修改</a>
+	</div>
+	
+
+</div>
+{%endblock%}
+
+
+
+

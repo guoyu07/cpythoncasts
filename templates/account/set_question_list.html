@@ -1,0 +1,31 @@
+{%extends 'layout.html'%}
+
+
+{%block content%}
+<div class="container">
+    <div class="content-outter">
+{%include 'account/set_left.html'%}
+</div>
+
+<div>
+    <ul>
+	<li>
+		<a class='btn' href="{% url "set_question_add"%}">添加题</a> 
+	</li>
+        {% for question in object_list %}
+            <li>{{ question.title }} | 
+		<a class='btn' href="{% url "set_question_update" question.id %}">修改</a> |
+		<a class='btn' href="{% url "set_question_delete" question.id %}">删除</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
+</div>
+</div>
+
+
+
+{%endblock%}
+

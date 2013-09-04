@@ -133,6 +133,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'cpythoncasts',
     'accounts',
+    'exam',
 )
 
 # A sample logging configuration. The only tangible logging
