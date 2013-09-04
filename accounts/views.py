@@ -78,11 +78,20 @@ class TeacherView:
 			context.update(info)
         		return context
 
+		def form_valid(self,form):
+			info       = set_common(self.request)
+			if form.instance.teacher.id != info['teacher'].id:
+				return self.form_invalid(form)
+			return super(TeacherView.Create, self).form_valid(form)
+
 
 class VideoView:
         class List(ListView):
-                model = Video
+                model         = Video
 		template_name = "set_video_list.html" 
+		def get_queryset(self):
+			info          = set_common(self.request)
+			return self.model.objects.filter(teacher=info['teacher'])
 		def get_context_data(self, **kwargs):
         		context    = super(VideoView.List, self).get_context_data(**kwargs)
 			info       = set_common(self.request)
@@ -104,17 +113,32 @@ class VideoView:
 			return super(VideoView.Create, self).form_valid(form)
 
         class Update(UpdateView):
-                model = Video
+                model         = Video
 		template_name = "set_video_form.html" 
-                fields=['title','intro','url','image','keyword','order']
+                fields        = ['title','intro','url','image','keyword','order']
+		def get_queryset(self):
+			info       = set_common(self.request)
+			objects    = Video.objects.filter(id=self.kwargs.get('pk'),\
+					teacher=info['teacher'])
+        		return objects
 		def get_context_data(self, **kwargs):
         		context    = super(VideoView.Update, self).get_context_data(**kwargs)
 			info       = set_common(self.request)
 			context.update(info)
         		return context
+		def form_valid(self,form):
+			info       = set_common(self.request)
+			if form.instance.teacher.id != info['teacher'].id:
+				return self.form_invalid(form)
+			return super(VideoView.Update, self).form_valid(form)
 
         class Delete(DeleteView):
-                model = Video
+                model         = Video
 		template_name = "set_confirm_delete.html" 
-                success_url = reverse_lazy('set_video_list')
+                success_url   = reverse_lazy('set_video_list')
+		def get_queryset(self):
+			info       = set_common(self.request)
+			objects    = Video.objects.filter(id=self.kwargs.get('pk'),\
+					teacher=info['teacher'])
+        		return objects
 
