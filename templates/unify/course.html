@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="wb:webmaster" content="6fc7a3bee868f102" />
+
+<title>编程公园_python,django,Java基础语言</title>
+
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link rel="stylesheet" id="css_person" type="text/css" media="all"
+	href="/static/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/static/css/sc.css" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/static/css/application-iolp.css" />
+
+<script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/static/js/messages_zh.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap-2.2.1.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+
+<script type="text/javascript"
+	src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" charset="utf-8"></script>
+<script type="text/javascript" src="/scripts/lib/swfobject.js"></script>
+<script type="text/javascript"
+	src="http://tajs.qq.com/stats?sId=25265136" charset="UTF-8"></script>
+
+<meta name="keywords" content="专题课程，课程，java，c，objective-c ios，android" />
+<meta name="description" content="新的编码？从这里开始！熟悉网站发展的基石" />
+<meta name="menu" content="CourseUnitMenu" />
+</head>
+
+<body style="overflow: auto;"
+	class="dashboard index signed_in user-dashboard">
+	<div id="wrapper">
+		<header id="header">
+			<div class="container">
+				<h1 class="logo">
+					<a href="/">编程公园 </a>
+				</h1>
+				<nav class="left">
+					<ul class="cf">
+						<li><a href="/welcome">首页</a></li>
+						<li><a href="/signup" style="color: #8efd00">注册</a></li>
+						<li><a id="login-modal" onclick="showLoginModal();"
+							href="javascript:return false;">登录</a></li>
+						<li><a href="/learn/courses">学习</a></li>
+						<li><a href="/learn/proCourses">高端课程</a></li>
+						<li><a href="/competitions/competition2013b/index.jsp"
+							target="_blank">编程大赛</a></li>
+					</ul>
+				</nav>
+				<nav class="right">
+					<ul class="cf">
+						<!-- li class="cc-button-group btn-group">
+                <a href="#" title="Kevin's Fenby" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/viewProfile" title="viewProfile">view profile</a></li>
+                    <li><a href="/editProfile" title="editProfile">edit profile</a></li>
+                    <li><a href="/logout" title="logout">logout</a></li>
+                </ul>
+            </li-->
+					</ul>
+				</nav>
+			</div>
+			<div id="notices"></div>
+		</header>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="container" id="curriculum">
+					<div id="course">
+						<div class="header">
+							<div class="course_details">
+								<h1>Java基础语言</h1>
+								<br />
+								<p class="author">
+									课程作者<a href="javascript:return false;"> Fenby.com</a>
+								</p>
+							</div>
+							<div class="course_progress">
+								<div class="badge language_java small_badge "></div>
+								<div>
+									<h3 class="percentage">0 %</h3>
+									<h4>已完成</h4>
+								</div>
+							</div>
+						</div>
+						<div class="main">
+							<ol class="units">
+								<li class="unit unit_item">
+									<h3 class="title">
+										<span class="number">1</span> Java语言的必备知识<span
+											style="float: right;" class="percent">0%</span>
+									</h3>
+
+									<div class="description">
+										<p>
+											Java语言都包含那些基础特性？基础语法是什么样的？变量有哪些类型？对象又是什么？对象的状态和行为有什么关联和区别？这些知识一点都不难，赶快和Fenby一起开始学习吧。</p>
+									</div>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/7">
+												<h4>
+													<span>1.&nbsp;</span>走进Java世界<span class="progress">0/6练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/17">
+												<h4>
+													<span>2.&nbsp;</span>拜访对象村<span class="progress">0/3练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/18">
+												<h4>
+													<span>3.&nbsp;</span>认识变量<span class="progress">0/7练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+								</li>
+								<li class="unit unit_item">
+									<h3 class="title">
+										<span class="number">2</span> 对象的行为和方法<span
+											style="float: right;" class="percent">0%</span>
+									</h3>
+
+									<div class="description">
+										<p>对象是Java的精髓，对象有状态和行为两个属性，方法能控制对象，Fenby带你领略对象的风采。</p>
+									</div>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/19">
+												<h4>
+													<span>1.&nbsp;</span>对象的行为<span class="progress">0/9练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/20">
+												<h4>
+													<span>2.&nbsp;</span>超强力方法<span class="progress">0/4练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/21">
+												<h4>
+													<span>3.&nbsp;</span>使用Java函数库<span class="progress">0/4练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+								</li>
+								<li class="unit unit_item">
+									<h3 class="title">
+										<span class="number">3</span> 对象村的优点<span
+											style="float: right;" class="percent">0%</span>
+									</h3>
+
+									<div class="description">
+										<p>
+											对象村的好处就是有继承，能够让人很容易的扩充，其实继承只是个开始，还有多态、接口、对象的生命周期等等很多重要的知识等着你来学习。</p>
+									</div>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/22">
+												<h4>
+													<span>1.&nbsp;</span>对象村的优质生活<span class="progress">0/9练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/25">
+												<h4>
+													<span>2.&nbsp;</span>深入多态<span class="progress">0/8练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/26">
+												<h4>
+													<span>3.&nbsp;</span>构造器与垃圾收集器<span class="progress">0/9练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+								</li>
+								<li class="unit unit_item">
+									<h3 class="title">
+										<span class="number">4</span> Java进阶知识<span
+											style="float: right;" class="percent">0%</span>
+									</h3>
+
+									<div class="description">
+										<p>在这里我们要学习数字的一些处理方式和如何在Java中使用并处理异常。</p>
+									</div>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/27">
+												<h4>
+													<span>1.&nbsp;</span>数字与静态<span class="progress">0/10练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+									<ul class="unit_courses">
+										<li class="started"><a class="course_link"
+											href="/learn/courseExercises/28">
+												<h4>
+													<span>2.&nbsp;</span>异常处理<span class="progress">0/4练习</span>
+												</h4> <span class="course_link"> 开始学习 &gt;</span>
+										</a> <span style="float: right;" class="percent "></span></li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+						<div class="meta">
+							<h3>课程介绍</h3>
+							<div class="description">
+								<p>
+									该Java课程是给那些只有一些或没有任何编码经验的初学者准备的，该课程以练习为目标导向，强调用户实际动手解决问题的能力。同时用户可以学习如何快速、轻松的创建大量的Java应用。</p>
+							</div>
+							<div id="sidebar">
+								<h3 class="points_block divider">得分</h3>
+								<div class="box current_points_box point_box"
+									data-original-title="Points earned today">
+									<h3 class="point_count">0</h3>
+									<span class="points_label">今日</span>
+								</div>
+								<div class="box total_points_box point_box"
+									data-original-title="Points earned all time">
+									<h3 class="point_count">0</h3>
+									<span class="points_label">最好</span>
+								</div>
+								<div class="box total_points_box point_box"
+									data-original-title="Points earned all time">
+									<h3 class="point_count">0</h3>
+									<span class="points_label">全部</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<script type='text/javascript' src='/dwr/engine.js'></script>
+			<script type='text/javascript'
+				src='/dwr/interface/MessageQuestionManager.js'></script>
+
+			<div class="wrapper">
+				<div class="container">
+					<a class="slide_feedback_btn" href="/public/feedback">意见反馈</a>
+					<div class="span4" style="margin-left: 5px;">
+						<div class="page-header">
+							<h3>
+								<a href="/public/about">关于我们</a>
+							</h3>
+							<span style="height: 30px; display: block;"> 互动编程,在线编程！ </span>
+							<address>
+								邮箱 <a href="mailto:#">fenby@fenby.com</a>
+							</address>
+						</div>
+					</div>
+					<div class="span4" style="width: 400px;">
+						<div class="page-header">
+							<h3>关注Fenby</h3>
+							<div>
+								<!--
+            <div class="center"><wb:follow-button uid="1045285482" type="red_3" width="100%" height="24" ></wb:follow-button></div>-->
+								<div class="guanzhu">
+
+									<p style="float: left;">
+										<a href="http://weibo.com/1045285482/profile" target="_blank">新浪微博</a>
+									</p>
+									<div style="float: left;">
+										<wb:follow-button height="24" width="100%" type="red_3"
+											uid="1045285482">
+											<iframe width="100%" scrolling="no" height="24"
+												frameborder="0"
+												src="http://widget.weibo.com/relationship/followbutton.php?btn=red&amp;style=3&amp;uid=1045285482&amp;width=100%&amp;height=24&amp;language=zh_cn"
+												marginheight="0"></iframe>
+										</wb:follow-button>
+									</div>
+									<div style="clear: both"></div>
+									<p class="tx">
+										<a href="http://t.qq.com/fenbycom" target="_blank">腾讯微博</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="xian"></div>
+
+					<div class="span4" style="margin-left: 0; float: right;">
+						<div class="page-header"
+							style="margin-bottom: 0px; padding-bottom: 0px;">
+							<h3>微信二维码</h3>
+							<img class="img-rounded" data-src="holder.js/200x226"
+								alt="加fenby微信" style="width: 80px; height: 80px;"
+								src="/images/qrcode.png">
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+					<div class="link">
+						友情链接:<a href="http://www.viphold.cn" target="_blank">微享科技</a><a
+							href="http://www.fenby.com" target="_blank">Fenby</a>
+					</div>
+					<div class="zuihou">
+						<a href="/public/about">关于我们</a>|<a href="/public/contact">联系方式</a>|<a
+							href="/public/jobs">加入我们</a>
+					</div>
+					<div class="zuihou zuihou2">
+						电话：010-88332490 传真：010-88332476<span style="float: right;">京ICP备12026467号-3
+							Copyright © 2013Version 1.2.30</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- modal-overlay -->
+	<div class="modal-overlay" id="login-overlay" style="display: none;"></div>
+	<div class="modal-content" id="login-content"
+		style="top: 10px; overflow: hidden; display: none; width: 100%; min-width: 570px; position: absolute;">
+		<div class="cf module" id="user-session-form">
+			<header>
+				<h2>登录Fenby</h2>
+			</header>
+
+			<div class="cell social-signin">
+				<h4>使用以下帐号登录Fenby</h4>
+
+				<a href="/auth/weiboAuth"
+					class="bttn social-signup facebook sign-up"><span
+					class="icon-social-facebook"></span> 新浪微博帐号登录</a> <a
+					href="/auth/qqweiboAuth" class="bttn social-signup twitter sign-up"><span
+					class="icon-social-twitter"></span> 腾讯微博帐号登录</a>
+			</div>
+			<div class="cell neutral email-signin">
+				<h4>通过邮件登陆</h4>
+				<span class="or module">或者</span>
+				<form accept-charset="UTF-8" action="/j_security_check"
+					class="new_user" id="loginForm" method="post"
+					onsubmit="saveUsername(this);return validateForm(this)"
+					autocomplete="off">
+					<input id="j_username" name="j_username" placeholder="用户名/邮箱"
+						required size="30" tabindex="1" type="text" value=""
+						class="ui-inited"> <input id="j_password"
+						name="j_password" placeholder="密码" required size="30" tabindex="2"
+						type="password" class="ui-inited">
+					<div class="remember-me">
+						<input checked="checked" id="rememberMe"
+							name="_spring_security_remember_me" type="checkbox" value="1"
+							class="ui-inited"> <label for="rememberMe">记住我</label> <a
+							href="/zh/secret/new" class="secondary">忘记了你的密码？</a>
+					</div>
+					<div>
+						<input class="btn btn-primary" name="commit" type="submit"
+							style="padding: 5px 20px;" value="登录"> <a href="/signup"
+							style="border-radius: 0px; padding: 5px 20px; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;"
+							class="  btn btn-success pull-right">免费创建账户</a>
+					</div>
+				</form>
+			</div>
+			<a onclick="hideLoginModal();" class="bttn-close close-modal close">×</a>
+		</div>
+	</div>
+	<script language="javascript">
+		$(document).ready(function() {
+			var menuYloc = $("#login-content").offset().top;
+			$(window).scroll(function() {
+				var offsetTop = menuYloc + $(window).scrollTop() + "px";
+				$("#login-content").animate({
+					top : offsetTop
+				}, {
+					duration : 600,
+					queue : false
+				});
+			});
+		});
+	</script>
+	<!-- begin olark code -->
+	<script data-cfasync="false" type='text/javascript'>
+		/*         */
+		window.olark
+				|| (function(c) {
+					var f = window, d = document, l = f.location.protocol == "https:" ? "https:"
+							: "http:", z = c.name, r = "load";
+					var nt = function() {
+						f[z] = function() {
+							(a.s = a.s || []).push(arguments)
+						};
+						var a = f[z]._ = {}, q = c.methods.length;
+						while (q--) {
+							(function(n) {
+								f[z][n] = function() {
+									f[z]("call", n, arguments)
+								}
+							})(c.methods[q])
+						}
+						a.l = c.loader;
+						a.i = nt;
+						a.p = {
+							0 : +new Date
+						};
+						a.P = function(u) {
+							a.p[u] = new Date - a.p[0]
+						};
+						function s() {
+							a.P(r);
+							f[z](r)
+						}
+						f.addEventListener ? f.addEventListener(r, s, false)
+								: f.attachEvent("on" + r, s);
+						var ld = function() {
+							function p(hd) {
+								hd = "head";
+								return [ "<",hd,"></",hd,"><", i,
+										' onl' + 'oad="var d=', g,
+										";d.getElementsByTagName('head')[0].",
+										j, "(d.", h, "('script')).", k, "='",
+										l, "//", a.l, "'", '"', "></",i,">" ]
+										.join("")
+							}
+							var i = "body", m = d[i];
+							if (!m) {
+								return setTimeout(ld, 100)
+							}
+							a.P(1);
+							var j = "appendChild", h = "createElement", k = "src", n = d[h]
+									("div"), v = n[j](d[h](z)), b = d[h]
+									("iframe"), g = "document", e = "domain", o;
+							n.style.display = "none";
+							m.insertBefore(n, m.firstChild).id = z;
+							b.frameBorder = "0";
+							b.id = z + "-loader";
+							if (/MSIE[ ]+6/.test(navigator.userAgent)) {
+								b.src = "javascript:false"
+							}
+							b.allowTransparency = "true";
+							v[j](b);
+							try {
+								b.contentWindow[g].open()
+							} catch (w) {
+								c[e] = d[e];
+								o = "javascript:var d=" + g
+										+ ".open();d.domain='" + d.domain
+										+ "';";
+								b[k] = o + "void(0);"
+							}
+							try {
+								var t = b.contentWindow[g];
+								t.write(p());
+								t.close()
+							} catch (x) {
+								b[k] = o
+										+ 'd.write("'
+										+ p().replace(/"/g,
+												String.fromCharCode(92) + '"')
+										+ '");d.close();'
+							}
+							a.P(2)
+						};
+						ld()
+					};
+					nt()
+				})({
+					loader : "static.olark.com/jsclient/loader0.js",
+					name : "olark",
+					methods : [ "configure", "extend", "declare", "identify" ]
+				});
+		/* custom configuration goes here (www.olark.com/documentation) */
+		olark.identify('7691-720-10-8445');/*   */
+	</script>
+	<noscript>
+		<a href="https://www.olark.com/site/7691-720-10-8445/contact"
+			title="Contact us" target="_blank">Questions? Feedback?</a> powered
+		by <a href="http://www.olark.com?welcome"
+			title="Olark live chat software">Olark live chat software</a>
+	</noscript>
+	<!-- end olark code -->
+</body>
+
+<script type="text/javascript">
+	//show login modal
+	function showLoginModal() {
+		$('#login-overlay').css('display', 'block');
+		$('#login-content').css('display', 'block');
+	}
+	//hide login modal
+	function hideLoginModal() {
+		$('#login-overlay').css('display', 'none');
+		$('#login-content').css('display', 'none');
+	}
+
+	$(function() {
+		var browser = (function() {
+			var b = {};
+			b.isIE = navigator.appName == "Microsoft Internet Explorer"
+					&& parseFloat(navigator.userAgent
+							.match(/MSIE ([0-9]+[\.0-9]+)/)[1]);
+			b.isOldIE = b.isIE && b.isIE < 9;
+			return b;
+		})();
+		if (browser.isOldIE) {
+			if (window.location.href.indexOf('updateYourBrowser') != -1) {
+				return;
+			}
+			window.location.href = '/updateYourBrowser.jsp';
+		}
+	});
+</script>
+
+<!-- Goolge analycis begin -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push([ '_setAccount', 'UA-40337600-1' ]);
+	_gaq.push([ '_setDomainName', 'fenby.com' ]);
+	_gaq.push([ '_setAllowLinker', true ]);
+	_gaq.push([ '_trackPageview' ]);
+
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- Goolge analycis end -->
+
+</html>
+
+
