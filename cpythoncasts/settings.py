@@ -1,9 +1,10 @@
+#coding:utf-8
 # Django settings for cpythoncasts project.
 
 import os
 
 ROOT_DIR=os.getcwd()
-
+PROJECT_ROOT=os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -34,7 +35,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'PRC'
+TIME_ZONE = 'Asia/Shanghai'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -66,7 +67,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ROOT_DIR+'/static/'
+STATIC_ROOT = '/static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -74,6 +75,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT,'static'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -112,14 +114,13 @@ ROOT_URLCONF = 'cpythoncasts.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'cpythoncasts.wsgi.application'
 
-TEMPLATE_DIRS = (
+TEMPLATE_DIRS = os.path.join(PROJECT_ROOT,'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-   ROOT_DIR +'/templates/',
-)
 
-INSTALLED_APPS = (
+#设置installed apps为django，引入和本地项目三部分
+DJANGO_APPS=(
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -127,15 +128,19 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-     'grappelli',
      'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+)
+THIRD_PART_APPS=(
+    'grappelli',    
+)
+LOCAL_APPS=(
     'cpythoncasts',
     'accounts',
     'exam',
 )
-
+INSTALLED_APPS = DJANGO_APPS + THIRD_PART_APPS + LOCAL_APPS
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

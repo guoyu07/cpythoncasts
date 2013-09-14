@@ -1,3 +1,4 @@
+#coding:utf-8
 from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 import settings
@@ -5,10 +6,12 @@ import settings
 from django.contrib import admin
 admin.autodiscover()
 
+from .views import *
+
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'cpythoncasts.views.index'),
+    #url(r'^$', 'cpythoncasts.views.index'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
@@ -22,6 +25,17 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^accounts/', include('accounts.urls')),
-	url(r'^unify/',include('unify.urls')),
+#以下是主页页面等信息
+	url(r'^$',unify),
+    url(r'^videos/$', unifyallvideos),
+	url(r'^lesson/$', unifylesson),
+    url(r'^class/$', unifyclass),
+    url(r'^blog/$', unifyblog),
+	url(r'^collection/$', unifycollection),
+	url(r'^teachers/$', unifyteachers),
+    url(r'^test/$',unifytest),
+    url(r'^login/$',unifylogin),
+    url(r'^register/$',unifyregister),
+    url(r'^map/$',unifymap),
 
 )

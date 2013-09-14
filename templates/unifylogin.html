@@ -1,0 +1,44 @@
+{%extends "unifylayout.html"%}
+{%block content%}
+
+<!--=== Breadcrumbs登录页面 ===-->
+<div class="breadcrumbs margin-bottom-40">
+	<div class="container">
+        <h1 class="color-green pull-left">Login登录</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="/">主页</a> <span class="divider">/</span></li>
+            <li><a href="">页面</a> <span class="divider">/</span></li>
+            <li class="active">登录</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part ===-->
+<div class="container">		
+	<div class="row-fluid">
+        <form class="log-page"method="post" action="">
+			{%csrf_token%}
+            <h3>Login</h3>    
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                <input class="input-xlarge" type="text" placeholder="Username"{{form.username}}>
+            </div>
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-lock"></i></span>
+                <input class="input-xlarge" type="password" placeholder="Password" {{form.password}}>
+            </div>
+            <div class="controls form-inline">
+                <label class="checkbox"><input type="checkbox" /> 记录登录状态</label>
+                <input class="btn-u pull-right" type="submit">登录</input>
+				<input type="hidden" name="next" value="{{ next }}" />
+            </div>
+            <hr />
+            <h4>Do not have an account?还没注册?</h4>
+            <p>no worries,点击 <a class="color-green" href="/register">注册</a>免费注册一个新账户</p>
+        </form>
+    </div><!--/row-fluid-->
+</div><!--/container-->		
+<!--=== End Content Part登录页面结束 ===-->
+
+{%endblock%}

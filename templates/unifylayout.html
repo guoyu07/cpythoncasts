@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> 
+<html lang="en"> <!--<![endif]-->  
+<head>
+    <title></title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS Global Compulsory引用bootstrap,font-awesome要使用网络链接-->
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/header1.css">    
+    <link rel="stylesheet" href="/static/css/effects.css">
+    <link rel="stylesheet" href="/static/css/style_responsive.css">
+    <link rel="shortcut icon" href="favicon.ico">        
+    <!-- CSS Implementing Plugins添加的插件 -->    
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="screen">    	
+    <link rel="stylesheet" href="/static/css/parallax-slider.css" type="text/css">
+    <!-- CSS Theme样式 -->    
+    <link rel="stylesheet" href="/static/css/default.css" id="style_color">
+	<link rel="stylesheet" href="/static/css/sorting.css" id="style_color">
+	<link rel="stylesheet" href="/static/css/jquery.bxslider.css" id="style_color">
+</head>	
+
+<body>
+<!--=== 右上脚齿轮更改页面颜色小兔表 ===-->    
+<i class="style-switcher-btn icon-cogs"></i>
+<div class="style-switcher">
+    <div class="theme-close"><i class="icon-remove"></i></div>
+    <div class="theme-heading">页面颜色选择</div>
+    <ul class="unstyled">
+        <li class="theme-default theme-active" data-style="default" data-header="light"></li>
+        <li class="theme-blue" data-style="blue" data-header="light"></li>
+        <li class="theme-orange" data-style="orange" data-header="light"></li>
+        <li class="theme-red" data-style="red" data-header="light"></li>
+        <li class="theme-light" data-style="light" data-header="light"></li>
+    </ul>
+</div><!--/style-switcher-->
+<!--=== 右上脚齿轮更改页面颜色小兔表 结束 ===-->    
+
+<!--=== Top右上角表头 ===-->  
+<div class="top">
+    <div class="container">         
+        <ul class="loginbar pull-right">
+            <li><i class="icon-globe "></i><a>Languages <i class="icon-sort-up"></i></a>
+                <ul class="nav-list">
+                    <li class="active"><a href="#">中文</a> <i class="icon-ok"></i></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Russian</a></li>
+                    <li><a href="#">German</a></li>
+                </ul>
+            </li>   
+		{% if username %}
+			<li class="devider">&nbsp;</li>
+          欢迎{{username}}<li><a href="/logout/?next=/" class="login-btn">注销|<a href='/accounts/set'>账户设置</a></li>  
+		{%else %}
+          欢迎 游客，<li class="devider">&nbsp;</li>
+            <li><a href="/login/?next=/" class="login-btn">登录</a></li>  
+            <li class="devider">&nbsp;</li>
+            <li><a href="/register/?next=/" class="login-btn">注册</a></li>  
+		{%endif%} 
+        </ul>
+    </div>      
+</div><!--/top-->
+<!--=== End Top右上角表头 结束===-->    
+
+<!--=== Header头信息开始 ===-->
+<div class="header">               
+    <div class="container"> 
+        <!-- Logo      
+        <div class="logo">                                             
+            <a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo"></a>
+        </div> /logo -->        
+                                    
+        <!-- Menu -->       
+        <div class="navbar">                                
+            <div class="navbar-inner">                                  
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a><!-- /nav-collapse -->                                  
+                <div class="nav-collapse collapse">                                     
+                    <ul class="nav top-2">
+                        <li class="active">
+                            <a href="/" class="dropdown-toggle" data-toggle="dropdown">主页
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="index.html">pyhton课程页</a></li>
+                                <li><a href="/">django课程页</a></li>
+                                <li><a href="/">linux基础课程页</a></li>
+                                <li><a href="/">linux嵌入式课程页</a></li>
+                                <li><a href="/">MIT等国外视频页</a></li>
+                                <li><a href="/">web开发综合页</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/videos" class="dropdown-toggle" data-toggle="dropdown">视频
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/videos">python基础</a></li>
+                                <li><a href="/videos">django框架</a></li>
+                                <li><a href="/videos">uliweb/xadmin模块</a></li>
+                                <li><a href="/videos">linux基础</a></li>
+                                <li><a href="/videos">ubuntu使用</a></li>
+                                <li><a href="/videos">linux嵌入式</a></li>
+                                <li><a href="/videos">web开发综合</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/lesson" class="dropdown-toggle" data-toggle="dropdown">课程
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/lesson">python区</a></li>
+                                <li><a href="/lesson">uliweb区</a></li>
+                                <li><a href="/lesson">django区</a></li>
+                                <li><a href="/lesson">linux区</a></li>
+								<li><a href="/lesson">web开发区</a></li>
+                                <li><a href="/lesson">语音留言区</a></li>
+                                <li><a href="/lesson">FAQs问答</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/class" class="dropdown-toggle" data-toggle="dropdown">学习
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/class">最新公开课</a></li>
+                                <li><a href="/class">软件资讯</a></li>
+                                <li><a href="/class">就业信息</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/blog" class="dropdown-toggle" data-toggle="dropdown">论坛
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/blog">pyhton学习交流区</a></li>
+                                <li><a href="/blog">django等框架区</a></li>
+                                <li><a href="/blog">linux基础区</a></li>
+                                <li><a href="/blog">linux嵌入式开发区</a></li>
+								<li><a href="/blog">web开发综合区</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/teachers" class="dropdown-toggle" data-toggle="dropdown">关于我们
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/teachers">老师介绍</a></li>
+                                <li><a href="/map">google地图定位</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
+                    </ul>
+                    <div class="search-open">
+                        <div class="input-append">
+                            <form>
+                                <input type="text" class="span3" placeholder="输入查找信息..." />
+                                <button type="submit" class="btn-u">搜索</button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- /nav-collapse -->                                
+            </div><!-- /navbar-inner -->
+        </div><!-- /navbar -->                          
+    </div><!-- /container -->               
+</div><!--/header -->      
+<!--=== End Header头信息结束 ===-->
+
+{% block content %}
+<!--====content正文添加部分-->
+
+
+
+{% endblock %}
+
+<!--=== Footer 页脚尾===-->
+<div class="footer">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span4">
+                <!-- 关于本网站 -->
+		        <div class="headline"><h3>关于本网站</h3></div>	
+				<p class="margin-bottom-25">
+本着来源于网络，反馈网络的精神，本网站开发资源来源于互联网。采用开源的python，bootstrap，font awesome，django框架开发，网站用于IT技术学习交流。<br /></p><p>编程公园致力于python开发，django开发，linux开发,linux嵌入式开发以及国外IT视频等视频集聚，全部用于IT学习交流。为广大学友提供MIT和TED等国外技术网站学习视频讲解以及代码分析讲解。</p>	
+	            <!-- 大事件发布 -->
+		        <div class="headline"><h3>大事件发布：</h3></div>	
+				<p>最新大师级公开课信息，敬请期待～</p>
+				<form class="form-inline">
+					<div class="input-append">
+						<input type="text" placeholder="Email Address" class="input-medium">
+						<button class="btn-u">提交</button>
+					</div>
+				</form>							
+			</div><!--/span4-->	
+			<!--==欢迎新同学-->
+			<div class="span4">
+                <div class="posts">
+                    <div class="headline"><h3>欢迎新同学：</h3></div>
+                    <dl class="dl-horizontal">
+                        <dt><a href="#"><img src="/static/img/student3.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">{student}{logintime}分钟前加入
+								<br />TA学习了{lesson课程}
+							<br/>共有20000人在学习此课程</a></p> 
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                    <dt><a href="#"><img src="/static/img/student2.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">{student}{logintime}分钟前加入
+								<br />TA学习了{lesson课程}
+								<br/>共有10000人在学习此课程</a></p> 
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                    <dt><a href="#"><img src="/static/img/student1.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">{student}{logintime}分钟前加入
+							<br />TA学习了{lesson课程}
+							<br/>共有8000人在学习此课程</a></p> 
+                        </dd>
+                    </dl>
+					<dl class="dl-horizontal">
+                    <dt><a href="#"><img src="/static/img/student3.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">{student}{logintime}分钟前加入
+								<br />TA学习了{lesson课程}
+								<br/>共有19823人在学习此课程</a></p> 
+                        </dd>
+                    </dl>
+                </div>
+			</div><!--/span4-->
+		<!--==end欢迎新同学-->
+<!--==关于我们-->
+			<div class="span4">
+		        <div class="headline"><h3>关于我们：</h3></div>	
+                <address>
+					jeapedu智普教育 <br />
+					北京市海淀区上地八维一校区，综合办公楼C区2，二层227室（爱心第二幼儿园院内） <br />
+					中国，北京市 <br />
+					Phone: +86 18010096001 <br />
+					QQ : 张老师：1941847311 <br />
+					Email: <a href="mailto:market@jeapedu.com" class="">market@jeapedu.com</a>
+                </address>
+<!--==end关于我们-->
+                <!-- 开发资源联系我们Stay Connected -->
+		        <div class="headline"><h3>找到我们：</h3></div>	
+                <ul class="social-icons">
+                    <li><a href="#" data-original-title="github" class="social_rss"></a></li>
+					<li><i class="icon-github">github </i></li>
+					<li><i class="icon-pinterest-sign">github	</i></li>
+                    <li><a href="#" data-original-title="Facebook"><i class="icon-github">github </i></a></li>
+                    <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
+                    <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
+                    <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
+                    <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
+                    <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+                </ul>
+			</div><!--/span4-->
+		</div><!--/row-fluid-->	
+	</div><!--/container-->	
+</div><!--/footer-->	
+<!--=== End Footer 页脚尾===-->
+
+<!--=== 开发者权益Copyright ===-->
+<div class="copyright">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span8">						
+	            <p>2013 &copy; 本网站由jeapedu智普教育开发，使用保留开发者权益 <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+			</div>
+			<div class="span4">	
+				<a href="index.html"><img id="logo-footer" src="/static/unifyCSS/img/logojeapedu.png" class="pull-right" alt="" /></a>
+			</div>
+		</div><!--/row-fluid-->
+	</div><!--/container-->	
+</div><!--/copyright-->	
+<!--=== End Copyright ===-->
+
+<!-- JS Global Compulsory bootstrapJS库-->			
+<script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>	
+<!-- JS Implementing Plugins 引入的JS库-->           
+<script type="text/javascript" src="/static/js/back-to-top.js"></script>
+<!-- JS Page Level 页面方法JS库-->    
+<script type="text/javascript" src="/static/js/sorting.js"></script>       
+<script type="text/javascript" src="/static/js/app.js"></script>
+<script type="text/javascript" src="/static/js/ga.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cslider.js"></script>
+<script type="text/javascript" src="/static/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="/static/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.quicksand.js"></script>
+<script type="text/javascript" src="/static/js/modernizr.custom.js"></script>	
+<script type="text/javascript" src="/static/js/modernizr.js"></script>
+<script type="text/javascript" src="/static/js/gmap.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      	App.init();
+        App.initSliders();
+        Index.initParallaxSlider();
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="/static/js/respond.js"></script>
+<![endif]-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29166220-1']);
+  _gaq.push(['_setDomainName', 'htmlstream.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!--==topcontrol向上按钮-->
+<div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 5px; right: 5px; opacity: 1; cursor: pointer;"><img src="/static/img/back_to_top_green.gif" style="width:51px; height:42px"></div>
+<!--/topcontrol-->
+</body>
+</html>	

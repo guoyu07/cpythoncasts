@@ -1,0 +1,49 @@
+{%extends "unifylayout.html"%}
+{%block content%}
+
+<!--=== Content Part 注册页面===-->
+<div class="body">
+	<div class="breadcrumbs margin-bottom-50">
+    	<div class="container">
+            <h1 class="color-green pull-left">Register注册新用户</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/">主页</a> <span class="divider">/</span></li>
+                <li><a href="">页面</a> <span class="divider">/</span></li>
+                <li class="active">注册Register</li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+
+	<div class="container">		
+		<div class="row-fluid margin-bottom-10">
+        	<form class="reg-page"method="post" action="">
+			{% csrf_token%}
+            	<h3>Register a new account</h3>
+                <div class="controls">    
+                    <label>Name用户名：<span class="color-red">*</span></label>
+                    <input type="text"{{form.username}} class="span12" placeholder="小于30位字母数字下划线"/>
+                    <label>Email Address 邮箱：<span class="color-red">*</span></label>
+                    <input type="email" {{form.email}}class="span12" placeholder="Email"/>
+					<label>Password 密码：<span class="color-red">*</span></label>
+                        <input type="password"{{form.password1}} class="span12" placeholder="6位以上字母数字"/>
+					<label>Confirm Password 密码确认： <span class="color-red">*</span></label>
+                        <input type="password" {{form.password2}}class="span12" placeholder="再次输入密码"/>
+                </div>
+<!--                <div class="controls form-inline">-->
+<!--                    <label class="checkbox"><input type="checkbox" />&nbsp; I read <a href="">Terms and Conditions</a></label>-->
+<!--                    <button class="btn-u pull-right" type="submit">Register</button>-->
+<!--                </div>-->
+					  <div class="controls form-inline">
+                    <label class="checkbox"><input type="checkbox" />&nbsp; 我已经阅读 <a href="">注册注意事项</a></label>
+                    <input class="btn-u pull-right" type="submit">确认注册</input>
+					<input type="hidden" name="next" value="{{next}}"/>
+                </div>
+                <hr />
+<!--				<p>Already Signed Up? Click <a href="page_login.html" class="color-green">Sign In</a> to login your account.</p>-->
+				<p>已经完成注册?点击 <a href="/login" class="color-green">登录</a>登录自己的账户</p>
+            </form>
+        </div><!--/row-fluid-->
+	</div><!--/container-->		
+</div><!--/body-->
+<!--=== End Content Part 注册页面结束===-->
+{%endblock%}
