@@ -2,25 +2,26 @@
 
 {% block content %}
 
-<!--=== Breadcrumbs ===-->
+<!--=== Breadcrumbs快捷栏界面表头 ===-->
 <div class="breadcrumbs margin-bottom-20">
 	<div class="container">
-        <h1 class="color-green pull-left">Latest Posts</h1>
+        <h1 class="color-green pull-left">{博客内容}</h1>
         <ul class="pull-right breadcrumb">
-            <li><a href="/">Home</a> <span class="divider">/</span></li>
-            <li class="active">Blog</li>
+            <li><a href="/">主页</a> <span class="divider">/</span></li>
+            <li><a href="/blog">博客</a> <span class="divider">/</span></li>
+            <li class="active">{博客内容}<</li>
         </ul>
     </div><!--/container-->
 </div><!--/breadcrumbs-->
 <!--=== End Breadcrumbs ===-->
 
-<!--=== Content Part ===-->
+<!--=== Content Part正文部分 ===-->
 <div class="container">		
-	<div class="row-fluid blog-page">    
+	<div class="row-fluid blog-page blog-item">
         <!-- Left Sidebar -->
     	<div class="span9">
         	<div class="blog margin-bottom-30">
-            	<h3>Pellentesque habitant morbi tristique</h3>
+            	<h3>{具体文章评论：}</h3>
             	<ul class="unstyled inline blog-info">
                 	<li><i class="icon-calendar"></i> February 02, 2013</li>
                 	<li><i class="icon-pencil"></i> Diana Anderson</li>
@@ -36,199 +37,6 @@
                     </li>
                 </ul>
                 <div class="blog-img"><img src="/static/img/1.jpg" alt="" /></div>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
-                <p><a class="btn-u btn-u-small" href="blog_item.html">Read More</a></p>
-            </div><!--/blog-->
-
-        	<div class="blog margin-bottom-30">
-            	<h3>Consectetur adipiscing elit similique</h3>
-            	<ul class="unstyled inline blog-info">
-                	<li><i class="icon-calendar"></i> January 30, 2013</li>
-                	<li><i class="icon-pencil"></i> Ann Bour</li>
-                	<li><i class="icon-comments"></i> <a href="#">12 Comments</a></li>
-                </ul>
-            	<ul class="unstyled inline blog-tags">
-                    <li>
-                        <i class="icon-tags"></i> 
-                        <a href="#">Technology</a> 
-                        <a href="#">Education</a>
-                        <a href="#">Internet</a>
-                        <a href="#">Media</a>
-                    </li>
-                </ul>
-                <div class="blog-img"><img src="/static/img/2big.jpg" alt="" /></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus.</p>
-                <p><a class="btn-u btn-u-small" href="blog_item.html">Read More</a></p>
-            </div><!--/blog-->
-
-        	<div class="blog margin-bottom-30">
-            	<h3>Blanditiis praesentium voluptatum deleniti</h3>
-            	<ul class="unstyled inline blog-info">
-                	<li><i class="icon-calendar"></i> January 15, 2013</li>
-                	<li><i class="icon-pencil"></i> Kate Dommy</li>
-                	<li><i class="icon-comments"></i> <a href="#">64 Comments</a></li>
-                </ul>
-            	<ul class="unstyled inline blog-tags">
-                    <li>
-                        <i class="icon-tags"></i> 
-                        <a href="#">Technology</a> 
-                        <a href="#">Education</a>
-                        <a href="#">Internet</a>
-                        <a href="#">Music</a>
-                        <a href="#">Films</a>
-                        <a href="#">Business</a>
-                    </li>
-                </ul>
-                <div class="blog-img"><img src="/static/img/3big.jpg" alt="" /></div>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias  expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
-                <p><a class="btn-u btn-u-small" href="blog_item.html">Read More</a></p>
-            </div><!--/blog-->
-            
-            <div class="pagination pagination-centered">
-                <ul>
-                    <li class="disabled"><a href="#">Prev</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li class="active"><a>3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="#">7</a></li>
-                    <li><a href="#">8</a></li>
-                    <li><a href="#">Next</a></li>
-                </ul>
-            </div>
-        </div><!--/span9-->
-
-        <!-- Right Sidebar -->
-    	<div class="span3">
-        	<!-- Search Bar -->
-        	<div class="headline"><h3>Search Bar</h3></div>
-            <div class="input-append  margin-bottom-20">
-                <input type="text" class="span9">
-                <button type="button" class="btn-u">Search</button>
-            </div>
-
-            <!-- Posts -->
-            <div class="posts margin-bottom-20">
-                <div class="headline"><h3>Recent Blog Entries</h3></div>
-                <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" /></a></dt>
-                    <dd>
-                        <p><a href="#">Anim moon officia Unify is an incredibly beautiful responsive Bootstrap Template</a></p> 
-                    </dd>
-                </dl>
-                <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" /></a></dt>
-                    <dd>
-                        <p><a href="#">Lorem sequat ipsum dolor lorem sunt aliqua put a bird sit amet consectetur.</a></p> 
-                    </dd>
-                </dl>
-                <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" /></a></dt>
-                    <dd>
-                        <p><a href="#">It works on all major web browsers, tablets and aliqua lorem sequat ipsum.</a></p> 
-                    </dd>
-                </dl>
-            </div><!--/posts-->
-
-        	<!-- Tabs Widget -->
-        	<div class="headline"><h3>Tabs Widget</h3></div>
-            <ul class="nav nav-tabs tabs">
-                <li class="active"><a href="#home" data-toggle="tab">First Tab</a></li>
-                <li><a href="#profile" data-toggle="tab">Second Tab</a></li>
-            </ul><!--/tabs-->
-            
-            <div class="tab-content">
-                <div class="tab-pane active" id="home">
-                    <p>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Pellentesque fermentum, Vivamus  felis consectetur eget orci metus.</p>
-                </div>
-                <div class="tab-pane" id="profile">
-                    <p>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc.</p>
-                </div>
-            </div><!--/tab-content-->
-
-        	<!-- Photo Stream -->
-        	<div class="headline"><h3>Photo Stream</h3></div>
-            <ul class="unstyled blog-ads">
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/5.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/8.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/1.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/2.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/7.jpg" alt="" class="hover-effect" /></a></li>
-            </ul>
-
-        	<!-- Blog Tags -->
-        	<div class="headline"><h3>Blog Tags</h3></div>
-            <ul class="unstyled inline blog-tags">
-            	<li><a href="#"><i class="icon-tags"></i> Business</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Music</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Internet</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Money</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Google</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> TV Shows</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Education</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> People</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> People</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Math</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Photos</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Electronics</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Apple</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Canada</a></li>
-            </ul>
-
-        	<!-- Blog Latest Tweets -->
-            <div class="blog-twitter">
-                <div class="headline"><h3>Latest Tweets</h3></div>
-                <p><a href="">@htmlstream</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/sBav7dm</a> <span>5 hours ago</span></p>
-                <p><a href="">@unify</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/f58Ddg4</a> <span>8 hours ago</span></p>
-                <p><a href="">@veroeos</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/adVs9f</a> <span>17 hours ago</span></p>
-                <p><a href="">@accusamus </a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/wf5Fs6</a> <span>23 hours ago</span></p>
-                <p><a href="">@veroeoset</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/7EsffP</a> <span>1 day ago</span></p>
-            </div>
-        </div><!--/span3-->
-    </div><!--/row-fluid-->        
-</div><!--/container-->		
-<!--=== End Content Part ===-->
-
-<!--=== Breadcrumbs ===-->
-<div class="breadcrumbs margin-bottom-20">
-	<div class="container">
-        <h1 class="color-green pull-left">Item Pege</h1>
-        <ul class="pull-right breadcrumb">
-            <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-            <li><a href="blog.html">Blog</a> <span class="divider">/</span></li>
-            <li class="active">Item</li>
-        </ul>
-    </div><!--/container-->
-</div><!--/breadcrumbs-->
-<!--=== End Breadcrumbs ===-->
-
-<!--=== Content Part ===-->
-<div class="container">		
-	<div class="row-fluid blog-page blog-item">
-        <!-- Left Sidebar -->
-    	<div class="span9">
-        	<div class="blog margin-bottom-30">
-            	<h3>Pellentesque habitant morbi tristique</h3>
-            	<ul class="unstyled inline blog-info">
-                	<li><i class="icon-calendar"></i> February 02, 2013</li>
-                	<li><i class="icon-pencil"></i> Diana Anderson</li>
-                	<li><i class="icon-comments"></i> <a href="#">24 Comments</a></li>
-                </ul>
-            	<ul class="unstyled inline blog-tags">
-                    <li>
-                        <i class="icon-tags"></i> 
-                        <a href="#">Technology</a> 
-                        <a href="#">Education</a>
-                        <a href="#">Internet</a>
-                        <a href="#">Media</a>
-                    </li>
-                </ul>
-                <div class="blog-img"><img src="assets/img/posts/1.jpg" alt="" /></div>
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
 
                 <blockquote class="hero">
@@ -243,9 +51,9 @@
 
             <!-- Media -->
             <div class="media">
-            	<h3 class="color-green">Comments</h3>
+            	<h3 class="color-green">最新评论：</h3>
                 <a class="pull-left" href="#">
-                    <img class="media-object" src="assets/img/sliders/elastislide/2.jpg" alt="" />
+                    <img class="media-object" src="/static/img/student2.jpg" alt="" />
                 </a>
                 <div class="media-body">
                 <h4 class="media-heading">Media heading <span>5 hours ago / <a href="#">Reply</a></span></h4>
@@ -256,7 +64,7 @@
                     <!-- Nested media object -->
                     <div class="media">
                         <a class="pull-left" href="#">
-                            <img class="media-object" src="assets/img/sliders/elastislide/5.jpg" alt="" />
+                            <img class="media-object" src="/static/img/student1.jpg" alt="" />
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">Media heading <span>17 hours ago / <a href="#">Reply</a></span></h4>
@@ -268,7 +76,7 @@
 
                     <div class="media">
                         <a class="pull-left" href="#">
-                            <img class="media-object" src="assets/img/sliders/elastislide/11.jpg" alt="" />
+                            <img class="media-object" src="/static/img/student1.jpg" alt="" />
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">Media heading <span>2 days ago / <a href="#">Reply</a></span></h4>
@@ -280,7 +88,7 @@
 
             <div class="media">
                 <a class="pull-left" href="#">
-                    <img class="media-object" src="assets/img/sliders/elastislide/9.jpg" alt="" />
+                    <img class="media-object" src="/static/img/student3.jpg" alt="" />
                 </a>
                 <div class="media-body">
                     <h4 class="media-heading">Media heading <span>July 5,2013 / <a href="#">Reply</a></span></h4>
@@ -290,38 +98,24 @@
 
             <hr />
 
-            <!-- Leave a Comment -->
+            <!-- Leave a Comment留言 -->
             <div class="post-comment">
-            	<h3 class="color-green">Leave a Comment</h3>
+            	<h3 class="color-green">评论留言：</h3>
+				<p>（试试语言留言强大的功能把~）</p>
                 <form>
-                    <label>Name</label>
+                    <label>标题：</label>
                     <input type="text" class="span7" />
-                    <label>Email <span class="color-red">*</span></label>
-                    <input type="text" class="span7" />
-                    <label>Message</label>
+                    <label>留言：</label>
                     <textarea rows="8" class="span10"></textarea>
-                    <p><button type="submit" class="btn-u">Send Message</button></p>
+                    <p><button type="submit" class="btn-u">发表评论</button></p>
                 </form>
             </div><!--/post-comment-->
         </div><!--/span9-->
 
-        <!-- Right Sidebar -->
+        <!-- Right Sidebar 右侧下拉栏-->
     	<div class="span3">
-        	<!-- Photo Stream -->
-        	<div class="headline"><h3>Photo Stream</h3></div>
-            <ul class="unstyled blog-ads">
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/5.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/6.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/8.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/10.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/11.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/1.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/2.jpg" alt="" class="hover-effect" /></a></li>
-            	<li><a href="#"><img src="assets/img/sliders/elastislide/7.jpg" alt="" class="hover-effect" /></a></li>
-            </ul>
-
-        	<!-- Blog Tags -->
-        	<div class="headline"><h3>Blog Tags</h3></div>
+        		<!-- Blog Tags 右侧标签云-->
+        	<div class="headline"><h3>标签云：</h3></div>
             <ul class="unstyled inline blog-tags">
             	<li><a href="#"><i class="icon-tags"></i> Business</a></li>
             	<li><a href="#"><i class="icon-tags"></i> Music</a></li>
@@ -334,10 +128,45 @@
             	<li><a href="#"><i class="icon-tags"></i> Apple</a></li>
             	<li><a href="#"><i class="icon-tags"></i> Canada</a></li>
             </ul>
-
-        	<!-- Blog Latest Tweets -->
+            <!-- Posts 滚动显示最新加入同学-->
+            <div class="posts margin-bottom-20">
+                <div class="headline"><h3>欢迎新同学：</h3></div>
+                 <dl class="dl-horizontal">
+                        <dt><a href="#"><img src="/static/img/student3.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">{student}{logintime}</a>分钟前加入
+                                <br />TA学习了{lesson课程}
+                            <br/>共有20000人在学习此课程</a></p> 
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                    <dt><a href="#"><img src="/static/img/student2.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">{student}{logintime}分钟前加入
+                                <br />TA学习了{lesson课程}
+                                <br/>共有10000人在学习此课程</a></p> 
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                    <dt><a href="#"><img src="/static/img/student1.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">{student}{logintime}分钟前加入
+                            <br />TA学习了{lesson课程}
+                            <br/>共有8000人在学习此课程</a></p> 
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                    <dt><a href="#"><img src="/static/img/student3.jpg" alt="" /></a></dt>
+                        <dd>
+                            <p><a href="#">{student}{logintime}分钟前加入
+                                <br />TA学习了{lesson课程}
+                                <br/>共有19823人在学习此课程</a></p> 
+                        </dd>
+                    </dl>
+            </div><!--/posts-->
+        	<!-- Blog Latest Tweets最新评论 -->
             <div class="blog-twitter">
-                <div class="headline"><h3>Latest Tweets</h3></div>
+                <div class="headline"><h3>最新评论：</h3></div>
                 <p><a href="">@htmlstream</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/sBav7dm</a> <span>5 hours ago</span></p>
                 <p><a href="">@unify</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/f58Ddg4</a> <span>8 hours ago</span></p>
                 <p><a href="">@veroeos</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/adVs9f</a> <span>17 hours ago</span></p>
