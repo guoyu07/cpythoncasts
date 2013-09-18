@@ -1,0 +1,91 @@
+<!--======顶头导航栏页面======-->
+
+
+
+<!--=== Header头信息开始 ===-->
+{%load url from future%}
+
+<div class="navbar">                                
+            <div class="navbar-inner">                                  
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a><!-- /nav-collapse -->                                  
+                <div class="nav-collapse collapse"> <!--/-->   
+                  
+                   
+                    <ul class="nav top-2">
+                        <li class="{% active request.path "^/$" %}">
+                            <a href="{% url '/' %}" >主页                          
+                            </a>
+                                                 
+                        </li>
+                         
+                        <li class="{% active request.path "^/videos"%}">
+                            <a href="{%url '/videos'%}" class="dropdown-toggle" data-toggle="dropdown">视频
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/videos">python基础</a></li>
+                                <li><a href="/videos">django框架</a></li>
+                                <li><a href="/videos">uliweb/xadmin模块</a></li>
+                                <li><a href="/videos">linux基础</a></li>
+                                <li><a href="/videos">ubuntu使用</a></li>
+                                <li><a href="/videos">linux嵌入式</a></li>
+                                <li><a href="/videos">web开发综合</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/lesson" class="dropdown-toggle" data-toggle="dropdown">课程
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/lesson">python区</a></li>
+                                <li><a href="/lesson">uliweb区</a></li>
+                                <li><a href="/lesson">django区</a></li>
+                                <li><a href="/lesson">linux区</a></li>
+                                <li><a href="/lesson">web开发区</a></li>
+                                <li><a href="/lesson">语音留言区</a></li>
+                                <li><a href="/lesson">FAQs问答</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/learn" class="dropdown-toggle" data-toggle="dropdown">学习
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/class">最新公开课</a></li>
+                                <li><a href="/class">软件资讯</a></li>
+                                <li><a href="/class">就业信息</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/blog" class="dropdown-toggle" data-toggle="dropdown">论坛
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/blog">pyhton学习交流区</a></li>
+                                <li><a href="/blog">django等框架区</a></li>
+                                <li><a href="/blog">linux基础区</a></li>
+                                <li><a href="/blog">linux嵌入式开发区</a></li>
+                                <li><a href="/blog">web开发综合区</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li>
+                            <a href="/teachers" class="dropdown-toggle" data-toggle="dropdown">关于我们
+                                <b class="caret"></b>                            
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/teachers">老师介绍</a></li>
+                                <li><a href="/map">google地图定位</a></li>
+                            </ul>
+                            <b class="caret-out"></b>                        
+                        </li>
+                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>
+                                                   
+                    </ul><!--/-->

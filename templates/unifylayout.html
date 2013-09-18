@@ -1,3 +1,5 @@
+<!--======主页模板======-->
+
 <!DOCTYPE html>
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->  
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
@@ -5,8 +7,8 @@
 <!--[if !IE]><!--> 
 <html lang="en"> <!--<![endif]-->  
 <head>
-    <title></title>
-
+    <!--==动态加载title-->
+    <title>{%block title %}home{% endblock title%}</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +35,7 @@
 	<link rel="stylesheet" href="/static/css/jquery.bxslider.css" id="style_color">
 </head>	
 
-<body>
+<body id ="page-{% block page_id%} contact {%endblock%}">
 <!--=== 右上脚齿轮更改页面颜色小兔表 ===-->    
 <i class="style-switcher-btn icon-cogs"></i>
 <div class="style-switcher">
@@ -57,8 +59,7 @@
                 <ul class="nav-list">
                     <li class="active"><a href="#">中文</a> <i class="icon-ok"></i></li>
                     <li><a href="#">English</a></li>
-                    <li><a href="#">Russian</a></li>
-                    <li><a href="#">German</a></li>
+                    
                 </ul>
             </li>   
 		{% if username %}
@@ -74,8 +75,6 @@
     </div>      
 </div><!--/top-->
 <!--=== End Top右上角表头 结束===-->    
-
-<!--=== Header头信息开始 ===-->
 <div class="header">               
     <div class="container"> 
         <!-- Logo      
@@ -83,31 +82,26 @@
             <a href="index.html"><img id="logo-header" src="assets/img/logo1-default.png" alt="Logo"></a>
         </div> /logo -->        
                                     
-        <!-- Menu -->       
+        <!-- Menu -->   
+        <!--==navbar start-->
         <div class="navbar">                                
             <div class="navbar-inner">                                  
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </a><!-- /nav-collapse -->                                  
-                <div class="nav-collapse collapse">                                     
+                </a>                                  
+                <div class="nav-collapse collapse"> 
+                  
+                   
                     <ul class="nav top-2">
-                        <li class="active">
-                            <a href="/" class="dropdown-toggle" data-toggle="dropdown">主页
-                                <b class="caret"></b>                            
+                        <li class="{{unify}}">
+                            <a href='/' >主页                          
                             </a>
-                            <ul class="dropdown-menu">
-                                <li class="active"><a href="index.html">pyhton课程页</a></li>
-                                <li><a href="/">django课程页</a></li>
-                                <li><a href="/">linux基础课程页</a></li>
-                                <li><a href="/">linux嵌入式课程页</a></li>
-                                <li><a href="/">MIT等国外视频页</a></li>
-                                <li><a href="/">web开发综合页</a></li>
-                            </ul>
-                            <b class="caret-out"></b>                        
+                                                 
                         </li>
-                        <li>
+                         
+                        <li class="{{unifyallvideos}}">
                             <a href="/videos" class="dropdown-toggle" data-toggle="dropdown">视频
                                 <b class="caret"></b>                            
                             </a>
@@ -122,7 +116,7 @@
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
-                        <li>
+                        <li class="{{unifylesson}}">
                             <a href="/lesson" class="dropdown-toggle" data-toggle="dropdown">课程
                                 <b class="caret"></b>                            
                             </a>
@@ -137,18 +131,18 @@
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
-                        <li>
-                            <a href="/class" class="dropdown-toggle" data-toggle="dropdown">学习
+                        <li class={{unifylearn}}>
+                            <a href="/learn" class="dropdown-toggle" data-toggle="dropdown">学习
                                 <b class="caret"></b>                            
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="/class">最新公开课</a></li>
-                                <li><a href="/class">软件资讯</a></li>
-                                <li><a href="/class">就业信息</a></li>
+                                <li><a href="/learn">最新公开课</a></li>
+                                <li><a href="/learn">软件资讯</a></li>
+                                <li><a href="/learn">就业信息</a></li>
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
-                        <li>
+                        <li class={{unifyblog}}>
                             <a href="/blog" class="dropdown-toggle" data-toggle="dropdown">论坛
                                 <b class="caret"></b>                            
                             </a>
@@ -161,7 +155,7 @@
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
-                        <li>
+                        <li class={{unifyteachers}}>
                             <a href="/teachers" class="dropdown-toggle" data-toggle="dropdown">关于我们
                                 <b class="caret"></b>                            
                             </a>
@@ -171,8 +165,9 @@
                             </ul>
                             <b class="caret-out"></b>                        
                         </li>
-                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>                               
-                    </ul>
+                        <li><a class="search"><i class="icon-search search-btn"></i></a></li>
+                                                   
+                    </ul><!--/-->
                     <div class="search-open">
                         <div class="input-append">
                             <form>
@@ -201,57 +196,24 @@
 		<div class="row-fluid">
 			<div class="span4">
                 <!-- 关于本网站 -->
-		        <div class="headline"><h3>关于本网站</h3></div>	
+		        <div class="headline"><h3>关于本网站:</h3></div>	
 				<p class="margin-bottom-25">
-本着来源于网络，反馈网络的精神，本网站开发资源来源于互联网。采用开源的python，bootstrap，font awesome，django框架开发，网站用于IT技术学习交流。<br /></p><p>编程公园致力于python开发，django开发，linux开发,linux嵌入式开发以及国外IT视频等视频集聚，全部用于IT学习交流。为广大学友提供MIT和TED等国外技术网站学习视频讲解以及代码分析讲解。</p>	
+本着来源于网络，反馈网络的精神，本网站开发资源来源于互联网。采用开源的python，bootstrap，font awesome，django框架开发。<br /></p><p>集聚python开发，django开发，linux开发,linux嵌入式开发以及国外的IT视频，为广大学友提供MIT和TED等国外网站学习视频讲解以及代码分析,用于IT学习交流。</p>	
 	            <!-- 项目贡献者： -->
 		        <div class="headline"><h3>项目贡献者：</h3></div>
-				<p><a href="https://github.com/asmcos/">asmocos</a>在github关注TA</p>
-				<p><a href="https://github.com/zhangtianyi1234/">zhangtianyi1234</a>在github关注TA</p>
-				<form class="form-inline">
+                <p><a href="https://github.com/limodou">limodou(uliweb ulipad原作者)</a>在github关注TA</p>
+				<p><a href="https://github.com/asmcos">asmocos</a>在github关注TA</p>
+				<p><a href="https://github.com/zhangtianyi1234">zhangtianyi1234</a>在github关注TA</p>
+				<!--<form class="form-inline">
 					<div class="input-append">
 						<input type="text" placeholder="Email Address" class="input-medium">
 						<button class="btn-u">提交</button>
 					</div>
-				</form>							
+				</form>	<!--/提交表单-->						
 			</div><!--/span4-->	
 			<!--==欢迎新同学-->
 			<div class="span4">
-                <div class="posts">
-                    <div class="headline"><h3>欢迎新同学：</h3></div>
-                    <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="/static/img/student3.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">{student}{logintime}分钟前加入
-								<br />TA学习了{lesson课程}
-							<br/>共有20000人在学习此课程</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="/static/img/student2.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">{student}{logintime}分钟前加入
-								<br />TA学习了{lesson课程}
-								<br/>共有10000人在学习此课程</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="/static/img/student1.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">{student}{logintime}分钟前加入
-							<br />TA学习了{lesson课程}
-							<br/>共有8000人在学习此课程</a></p> 
-                        </dd>
-                    </dl>
-					<dl class="dl-horizontal">
-                    <dt><a href="#"><img src="/static/img/student3.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">{student}{logintime}分钟前加入
-								<br />TA学习了{lesson课程}
-								<br/>共有19823人在学习此课程</a></p> 
-                        </dd>
-                    </dl>
-                </div>
+               {%include "newstudent.html"%}
 			</div><!--/span4-->
 		<!--==end欢迎新同学-->
 <!--==关于我们-->
@@ -268,16 +230,12 @@
 <!--==end关于我们-->
                 <!-- 开发资源联系我们Stay Connected -->
 		        <div class="headline"><h3>找到我们：</h3></div>	
-                <ul class="social-icons">
-                    <li><a href="#" data-original-title="github" class="social_rss"></a></li>
-					<li><i class="icon-github">github </i></li>
-					<li><i class="icon-pinterest-sign">github	</i></li>
-                    <li><a href="#" data-original-title="Facebook"><i class="icon-github">github </i></a></li>
-                    <li><a href="#" data-original-title="Twitter" class="social_twitter"></a></li>
-                    <li><a href="#" data-original-title="Goole Plus" class="social_googleplus"></a></li>
-                    <li><a href="#" data-original-title="Pinterest" class="social_pintrest"></a></li>
-                    <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
-                    <li><a href="#" data-original-title="Vimeo" class="social_vimeo"></a></li>
+                <ul class="unstyled inline team">
+                    <li><a href="#"><i class="icon-comment-alt"></i> sina微博+关注</a></li>
+                    <li><a href="#"><i class="icon-twitter"></i> twitter+粉丝</a></li>
+                    <li><a href="https://github.com/asmcos/"><i class="icon-github"></i> github+关注</a></li>
+                    <li><a href="#"><i class="icon-comments-alt"></i> 网易微信+关注</a></li>
+                    <li><a href="#"><i class="icon-google-plus"></i> google+关注</a></li>                
                 </ul>
 			</div><!--/span4-->
 		</div><!--/row-fluid-->	

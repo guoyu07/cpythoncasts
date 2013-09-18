@@ -1,4 +1,10 @@
-{%extends "unifylayout.html"%}
+<!--======网站主页======-->
+
+{% extends "unifylayout.html" %}
+{% load url from future %}
+<!--==动态加载title的方法-->
+{% block title %}main page{% endblock title %}
+
 {%block content%}
 <!--=== Slider轮播页面===-->
 <div class="slider-inner">
@@ -11,16 +17,17 @@
         <div class="da-slide">
             <h2><i>精深严谨的Liunx硬件开发</i> <br /> <i>命令行shell编程的本源</i> <br /> <i>web服务器配置必备之选</i></h2>
             <p><i>linux服务器专家级开发</i> <br /> <i>linux嵌入式硬件内核开发</i><br /> <i>cloud云计算linux服务器虚拟化</i></p>
-            <div class="da-img span6">
+           <!--==  <div class="da-img span6">
             	<div class="span6">
 					<iframe src="http://player.vimeo.com/video/47911018" width="100%" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
  				</div>
-            </div>
+            </div> -->
+            <div class="da-img"><img src="/static/img/linuxall.png" alt="" /></div>
         </div>
         <div class="da-slide">
             <h2><i>USING BEST WEB</i> <br /> <i>SOLUTIONS WITH</i> <br /> <i>HTML/CSS/bootstrap</i></h2>
             <p><i>使用python，django，github，bootstrap，simplejson....</i> <br /> <i>github，nginx，等web最新开发技术</i> <br /> <i>优雅开发美观新潮的网站 </i></p>
-            <div class="da-img"><img src="/static/img/html5andcss3.png" alt="image01" /></div>
+            <div class="da-img"><img src="/static/img/html5andcss3.png" alt="" /></div>
         </div>
         <nav class="da-arrows">
             <span class="da-arrows-prev"></span>
@@ -146,9 +153,9 @@
             <div class="thumbnail-style thumbnail-kenburn">
             	<div class="thumbnail-img">
                     <div class="overflow-hidden"><img src="/static/img/2.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="#">点击观看+</a>					
+                    <a class="btn-more hover-effect" href="/videos">点击观看+</a>					
                 </div>
-                <h4><a class="hover-effect" href="#">django install开发环境安装</a></h4>
+                <h4><a class="hover-effect" href="/lesson">django install开发环境安装</a></h4>
                 <p>本课程在于教授如何在不同OS开发环境安装django以及版本注意事项等</p>
             </div>
         </li>
@@ -156,9 +163,9 @@
             <div class="thumbnail-style thumbnail-kenburn">
             	<div class="thumbnail-img">
                     <div class="overflow-hidden"><img src="/static/img/3.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="#">点击观看+</a>					
+                    <a class="btn-more hover-effect" href="/videos">点击观看+</a>					
                 </div>
-                <h4><a class="hover-effect" href="#">django auth模块使用</a></h4>
+                <h4><a class="hover-effect" href="/lesson">django auth模块使用</a></h4>
                 <p>本课程在于介绍django 自带模块auth用户验证注册登录等方法如何使用和注意事项.</p>
             </div>
         </li>
@@ -166,9 +173,9 @@
             <div class="thumbnail-style thumbnail-kenburn">
             	<div class="thumbnail-img">
                     <div class="overflow-hidden"><img src="/static/img/9.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="#">点击观看+</a>					
+                    <a class="btn-more hover-effect" href="/videos">点击观看+</a>					
                 </div>
-                <h4><a class="hover-effect" href="#">django urls和views讲解</a></h4>
+                <h4><a class="hover-effect" href="/lesson">django urls和views讲解</a></h4>
                 <p>本课程在于介绍django urls和views如何使用和注意事项</p>
             </div>
         </li>
@@ -176,9 +183,9 @@
             <div class="thumbnail-style thumbnail-kenburn">
             	<div class="thumbnail-img">
                     <div class="overflow-hidden"><img src="/static/img/10.jpg" alt="" /></div>
-                    <a class="btn-more hover-effect" href="#">点击观看+</a>					
+                    <a class="btn-more hover-effect" href="/videos">点击观看+</a>					
                 </div>
-                <h4><a class="hover-effect" href="#">使用django内置admin模块</a></h4>
+                <h4><a class="hover-effect" href="/lesson">使用django内置admin模块</a></h4>
                 <p>本视频在于介绍django内置admin模块并教授相关的使用方法和注意事项</p>
             </div>
         </li>
@@ -265,12 +272,7 @@
                     <img src="static/img/walmart.png" class="color-img" alt="" />
                 </a>
             </li>
-			<li>
-                <a href="#">
-                    <img src="static/img/shell_grey.png" alt="" /> 
-                    <img src="static/img/shell.png" class="color-img" alt="" />
-                </a>
-            </li>
+			
 			<li>
                 <a href="#">
                     <img src="static/img/natural_grey.png" alt="" /> 
@@ -301,24 +303,14 @@
                     <img src="static/img/everyday.png" class="color-img" alt="" />
                 </a>
             </li>
-			<li>
-                <a href="#">
-                    <img src="static/img/cocacola_grey.png" alt="" /> 
-                    <img src="static/img/cocacola.png" class="color-img" alt="" />
-                </a>
-            </li>
+			
 			<li>
                 <a href="#">
                     <img src="static/img/spinworkx_grey.png" alt="" /> 
                     <img src="static/img/spinworkx.png" class="color-img" alt="" />
                 </a>
             </li>
-			<li>
-                <a href="#">
-                    <img src="static/img/shell_grey.png" alt="" /> 
-                    <img src="static/img/shell.png" class="color-img" alt="" />
-                </a>
-            </li>
+		
 			<li>
                 <a href="#">
                     <img src="static/img/natural_grey.png" alt="" /> 
@@ -337,14 +329,26 @@
                     <img src="static/img/everyday.png" class="color-img" alt="" />
                 </a>
             </li>
+            <li>
+                <a href="#">
+                    <img src="static/img/cocacola_grey.png" alt="" /> 
+                    <img src="static/img/cocacola.png" class="color-img" alt="" />
+                </a>
+            </li>
 			<li>
                 <a href="#">
                     <img src="static/img/spinworkx_grey.png" alt="" /> 
                     <img src="static/img/spinworkx.png" class="color-img" alt="" />
                 </a>
             </li>
+                <li>
+                <a href="#">
+                    <img src="static/img/shell_grey.png" alt="" /> 
+                    <img src="static/img/shell.png" class="color-img" alt="" />
+                </a>
+            </li>
 		</ul>
-	</div><!--/flexslider-->
+	</div><!--/flexslider endlinks-->
 	<!-- //End 最新视频 -->
 </div><!--/container-->		
 <!-- body正文完结End Content Part -->

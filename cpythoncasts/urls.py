@@ -29,13 +29,17 @@ urlpatterns = patterns('',
 	url(r'^$',unify),
     url(r'^videos/$', unifyallvideos),
 	url(r'^lesson/$', unifylesson),
-    url(r'^class/$', unifyclass),
+    url(r'^learn/$', unifylearn),
     url(r'^blog/$', unifyblog),
-	url(r'^collection/$', unifycollection),
 	url(r'^teachers/$', unifyteachers),
-    url(r'^test/$',unifytest),
+#以下是login等信息
     url(r'^login/$',unifylogin),
     url(r'^register/$',unifyregister),
+    url(r'^logout/$',unifylogout),
+#以下是test页面等信息
+    url(r'^collection/$', unifycollection),
+    url(r'^test/$',unifytest),
     url(r'^map/$',unifymap),
-
+    url(r'^unifycontentpage/$',unifycontentpage),
+    url(r'^unifypage/$',unifypage),
 )

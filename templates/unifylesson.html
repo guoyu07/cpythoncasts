@@ -1,4 +1,9 @@
+<!--======具体课程页面======-->
+
 {%extends "unifylayout.html"%}
+<!--==动态加载title的方法-->
+{% block title %}lesson page{% endblock title %}
+
 {%block content%}
 <!--=== 页标题===-->
 <div class="breadcrumbs margin-bottom-40">
@@ -35,8 +40,15 @@
                     </li>
                 </ul>
 				<!--==lesson具体课程正文开始-->
-                <div class="blog-img"><img src="/static/img/1.jpg" alt="" /></div>
-                <p>django等框架开发，集合Python进行web开发相关的django框架，uliweb框架，xadmin模块，modelview模块，registration模块，grappli插件模块等技术综合</p><a class="btn-u btn-u-small" href="blog_item.html">观看更多+</a>
+                 <div class="blog-img">
+                     <a class="fancybox-button zoomer" title="点击查看详情" href="/static/img/blog3.jpg">
+                        <div class="overlay-zoom">  
+                            <img src="/static/img/blog3.jpg" alt="" />
+                            <div class="zoom-icon"></div>                   
+                        </div>                                              
+                    </a>
+                    </div>
+                <p>django等框架开发，集合Python进行web开发相关的django框架，uliweb框架，xadmin模块，modelview模块，registration模块，grappli插件模块等技术综合</p><a class="btn-u btn-u-small" href="/class">观看更多+</a>
             </div><!--/end 具体课程正文-->
 
 
@@ -55,7 +67,10 @@
                 <strong>Well done!</strong> 开始学习，本章节的学习重点是。。容易出错和技术亮点是。。。学习后可以做 出什么东东～～
             </div>
                     <div class="accordion-inner">
-                      <p><img class="lft-img-margin pull-left img-width-200" src="/static/img/2.jpg" alt="" /> 本课程在于教授如何在不同OS开发环境安装django以及版本注意事项等</p>
+                       <a href="#">
+                        <img class="lft-img-margin pull-left img-width-200" src="/static/img/2.jpg" alt="点击观看{django install开发环境安装}" /> 
+                      </a>
+                      <p>本课程在于教授如何在不同OS开发环境安装django以及版本注意事项等</p>
                     </div>
                   </div>
                 </div><!--/accordion-group-->
@@ -192,82 +207,7 @@
                 </div>
             </div><!--/tab-content TAB页面切换显示结束-->
         </div><!--/span9-->
-
-        <!-- Right Sidebar 右侧快捷栏开始-->
-    	<div class="span3">
-        	<!-- Search Bar搜索 -->
-        	<div class="headline"><h3>搜索框：</h3></div>
-            <div class="input-append  margin-bottom-20">
-                <input type="text" class="span9">
-                <button type="button" class="btn-u">搜索</button>
-            </div>
-			
-			<!-- Blog Tags标签云 -->
-        	<div class="headline"><h3>标签云：</h3></div>
-            <ul class="unstyled inline blog-tags">
-            	<li><a href="#"><i class="icon-tags"></i> Business</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Music</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Internet</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Money</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Google</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> TV Shows</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Education</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> People</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> People</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Math</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Photos</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Electronics</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Apple</a></li>
-            	<li><a href="#"><i class="icon-tags"></i> Canada</a></li>
-            </ul>
-
-            <!-- Posts 滚动显示最新加入同学-->
-            <div class="posts margin-bottom-20">
-                <div class="headline"><h3>欢迎新同学：</h3></div>
-                 <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="/static/img/student3.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">{student}{logintime}</a>分钟前加入
-								<br />TA学习了{lesson课程}
-							<br/>共有20000人在学习此课程</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="/static/img/student2.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">{student}{logintime}分钟前加入
-								<br />TA学习了{lesson课程}
-								<br/>共有10000人在学习此课程</a></p> 
-                        </dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                    <dt><a href="#"><img src="/static/img/student1.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">{student}{logintime}分钟前加入
-							<br />TA学习了{lesson课程}
-							<br/>共有8000人在学习此课程</a></p> 
-                        </dd>
-                    </dl>
-					<dl class="dl-horizontal">
-                    <dt><a href="#"><img src="/static/img/student3.jpg" alt="" /></a></dt>
-                        <dd>
-                            <p><a href="#">{student}{logintime}分钟前加入
-								<br />TA学习了{lesson课程}
-								<br/>共有19823人在学习此课程</a></p> 
-                        </dd>
-                    </dl>
-            </div><!--/posts-->
-			<!-- Blog Latest Tweets最新文章 -->
-            <div class="blog-twitter">
-                <div class="headline"><h3>最新文章：</h3></div>
-                <p><a href="">@htmlstream</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/sBav7dm</a> <span>5 hours ago</span></p>
-                <p><a href="">@unify</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/f58Ddg4</a> <span>8 hours ago</span></p>
-                <p><a href="">@veroeos</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/adVs9f</a> <span>17 hours ago</span></p>
-                <p><a href="">@accusamus </a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/wf5Fs6</a> <span>23 hours ago</span></p>
-                <p><a href="">@veroeoset</a> At vero eos et accusamus et iusto odio dignissimos. <a href="#">http://t.co/7EsffP</a> <span>1 day ago</span></p>
-            </div>
-
-        </div><!--/span3-->
+        {%include "right_sidebar.html"%}
     </div><!--/row-fluid-->
 
 	<!-- Recent Works最新视频推荐 -->
