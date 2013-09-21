@@ -47,16 +47,7 @@ def unifyteachers(request):#unifyteachers页面
     retdata['unifyteachers'] = 'active'
     return render_to_response('unifyteachers.html',retdata,context_instance=RequestContext(request))
 
-def unifycollection(request):#unifycollection页面
-
-    retdata={'unify':'no','unifyallvideos':'no','unifylesson':'no'}
-    retdata['unifyallvideos'] = 'active'
-    return render_to_response('unifycollection.html',context_instance=RequestContext(request))
-def unifycollection(request):#unifycollection页面
-	return render_to_response('unifycollection.html',context_instance=RequestContext(request))
-def unifytest(request):#test测试界面
-    return render_to_response('unifytest.html',context_instance=RequestContext(request))
-
+#####user account matters
 def unifylogin(request):#unifylogin页面
     return render_to_response('unifylogin.html',context_instance=RequestContext(request))
 def unifyregister(request):#unifyregister页面
@@ -64,10 +55,23 @@ def unifyregister(request):#unifyregister页面
 def unifylogout(request):#logout页面
     user_logout(request)
     return render_to_response('/')
-
+###special pages
 def unifymap(request):#google map定位我们
-    return render_to_response('unifymap.html',context_instance=RequestContext(request))
+    retdata={'unify':'','unifyallvideos':'','unifylesson':'','unifylearn':'','unifyblog':'','unifyteachers':''}
+    retdata['unifyteachers'] = 'active'
+    return render_to_response('unifymap.html',retdata,context_instance=RequestContext(request))
 def unifycontentpage(request):#contentpage页面
-    return render_to_response("unifycontentpage.html",context_instance=RequestContext(request))
+    retdata={'unify':'','unifyallvideos':'','unifylesson':'','unifylearn':'','unifyblog':'','unifyteachers':''}
+    retdata['unifylesson'] = 'active'
+    return render_to_response("unifycontentpage.html",retdata,context_instance=RequestContext(request))
 def unifypage(request):#page页面
-    return render_to_response("unifypage.html",context_instance=RequestContext(request))
+    retdata={'unify':'','unifyallvideos':'','unifylesson':'','unifylearn':'','unifyblog':'','unifyteachers':''}
+    retdata['unifylearn'] = 'active'
+    return render_to_response("unifypage.html",retdata,context_instance=RequestContext(request))
+
+def unifycollection(request):#unifycollection页面
+    retdata={'unify':'no','unifyallvideos':'no','unifylesson':'no'}
+    retdata['unifyallvideos'] = 'active'
+    return render_to_response('unifycollection.html',retdata,context_instance=RequestContext(request))
+def unifytest(request):#test测试界面
+    return render_to_response('unifytest.html',context_instance=RequestContext(request))
