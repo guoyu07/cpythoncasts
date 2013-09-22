@@ -19,17 +19,17 @@
 	<div class="container">		
 		<div class="row-fluid margin-bottom-10">
         	<form class="reg-page"method="post" action="">
-			{% csrf_token%}
+			{% csrf_token %}
             	<h3>注册新用户</h3>
                 <div class="controls">    
                     <label>用户名：<span class="color-red">*</span></label>
-                    <input type="text"{{form.username}} class="span12" placeholder="6位以上字母数字下划线组合"/>
+                    <input type="text" name="username" class="span12" placeholder="6位以上字母数字下划线组合"/>
                     <label>邮箱：<span class="color-red">*</span></label>
-                    <input type="email" {{form.email}}class="span12" placeholder="Email"/>
+                    <input type="email"  name="email" class="span12" placeholder="Email"/>
 					<label>密码：<span class="color-red">*</span></label>
-                        <input type="password"{{form.password1}} class="span12" placeholder="6位以上字母数字组合"/>
+                        <input type="password" name = "password1" class="span12" placeholder="6位以上字母数字组合"/>
 					<label>密码确认： <span class="color-red">*</span></label>
-                        <input type="password" {{form.password2}}class="span12" placeholder="再次输入密码"/>
+                        <input type="password" name = "password2" class="span12" placeholder="再次输入密码"/>
                 </div>
 <!--                <div class="controls form-inline">-->
 <!--                    <label class="checkbox"><input type="checkbox" />&nbsp; I read <a href="">Terms and Conditions</a></label>-->
@@ -38,7 +38,7 @@
 					  <div class="controls form-inline">
                     
                     <button class="btn-u pull-right" type="submit">确认注册</button>
-					<input type="hidden" name="next" value="{{next}}"/>
+					<input type="hidden" name="next" value="/"/>
                 </div>
                 <hr />
 <!--				<p>Already Signed Up? Click <a href="page_login.html" class="color-green">Sign In</a> to login your account.</p>-->

@@ -2,9 +2,10 @@ from django.conf.urls import patterns, include, url
 from .views import InfoView,VideoView,QuestionView
 
 urlpatterns = patterns('',
-    url(r'login/$', 'django.contrib.auth.views.login',{'template_name': 'login.html'}),
-    url(r'logout/$', 'django.contrib.auth.views.logout'),
-    url(r'register/$', 'accounts.views.register'),
+    #url(r'login/$', 'django.contrib.auth.views.login',{'template_name': 'login.html'}),
+    #url(r'logout/$', 'django.contrib.auth.views.logout'),
+    #url(r'register/$', 'accounts.views.register'),
+
     url(r'set/$', 'accounts.views.set',name='set'),
 
 

@@ -11,25 +11,6 @@ from django.core.urlresolvers import reverse_lazy
 
 from cpythoncasts.models import *
 from exam.models import *
-from .forms import UserForm
-
-def register(request):
-        form = UserForm()
-        if request.method == 'GET':
-                return render_to_response('register.html',{'form':form},context_instance=RequestContext(request))
-        if request.method == 'POST':
-                form = UserForm(request.POST)
-                if form.is_valid():
-                        new_user = form.save()
-			# auto login
-			new_user = authenticate(username=request.POST['username'],
-                                    password=request.POST['password1'])
-            		login(request, new_user)
-			info = Userinfo(user=request.user)
-			info.save()
-                	return redirect("/")
-                else:
-			return render_to_response('register.html',{'form':form},context_instance=RequestContext(request))
 
 
 
@@ -43,10 +24,11 @@ def set_common(request):
 
 def set(request):
 	info          = set_common(request)
-	uinfo	      = Userinfo.objects.get(user=request.user)
-	info['uinfo'] = uinfo
-	return render_to_response('account/set.html',info,context_instance=RequestContext(request))
-
+	if request.user.is_authenticated():
+		uinfo	      = Userinfo.objects.get(user=request.user)
+		info['uinfo'] = uinfo
+		return render_to_response('account/set.html',info,context_instance=RequestContext(request))
+	return   redirect('/login/') 
 
 
 from django.views.generic.edit import UpdateView,CreateView,DeleteView
