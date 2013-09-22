@@ -19,6 +19,4 @@ urlpatterns = patterns('',
     url(r'question/add/$', QuestionView.Create.as_view(), name='set_question_add'),
     url(r'question/(?P<pk>\d+)/$', QuestionView.Update.as_view(), name='set_question_update'),
     url(r'question/(?P<pk>\d+)/delete/$', QuestionView.Delete.as_view(), name='set_question_delete'),
-
-
 )

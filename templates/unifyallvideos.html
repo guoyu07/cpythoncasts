@@ -1,4 +1,9 @@
+<!--======所有视频页面======-->
+
 {%extends "unifylayout.html"%}
+<!--==动态加载title的方法-->
+{% block title %}videos page{% endblock title %}
+
 {%block content%}
 <!--=== 页面头 ===-->
 <div class="breadcrumbs margin-bottom-40">
@@ -30,8 +35,8 @@
             <!--==注意此部分，页面按照1,2,3。。顺序排列，只是标识属于linux或者其他的class-->
             <ul class="portfolio recent-work clearfix"> 
                 <li data-id="id-1" class="linux">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/2.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/2.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -39,8 +44,8 @@
                     </a>
                 </li>
                 <li data-id="id-2" class="python">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/3.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/3.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -48,8 +53,8 @@
                     </a>
                 </li>
                  <li data-id="id-4" class="python">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/5.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/5.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -57,8 +62,8 @@
                     </a>
                 </li>
                 <li data-id="id-4" class="python">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/5.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/5.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -66,8 +71,8 @@
                     </a>
                 </li>
                 <li data-id="id-5" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/6.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/6.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -75,8 +80,8 @@
                     </a>
                 </li>
                 <li data-id="id-6" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/7.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/7.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -84,8 +89,8 @@
                     </a>
                 </li>
                 <li data-id="id-7" class="python">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/8.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/8.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -93,8 +98,8 @@
                     </a>
                 </li>
                 <li data-id="id-8" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/2.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/2.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -102,8 +107,8 @@
                     </a>
                 </li>
                 <li data-id="id-9" class="linux">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/9.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/9.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -111,8 +116,8 @@
                     </a>
                 </li>
                 <li data-id="id-10" class="国外视频">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/10.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/10.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -120,8 +125,8 @@
                     </a>
                 </li>
                 <li data-id="id-11" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/5.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/5.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -129,8 +134,8 @@
                     </a>
                 </li>
                 <li data-id="id-12" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/3.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/3.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -138,8 +143,8 @@
                     </a>
                 </li>
                 <li data-id="id-13" class="linux">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/6.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/6.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -147,8 +152,8 @@
                     </a>
                 </li>
                 <li data-id="id-14" class="嵌入式">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/9.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/9.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -156,8 +161,8 @@
                     </a>
                 </li>
 				<li data-id="id-15" class="linux">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/6.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/6.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -165,8 +170,8 @@
                     </a>
                 </li>
                 <li data-id="id-16" class="django">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/9.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/9.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -174,8 +179,8 @@
                     </a>
                 </li>
                 <li data-id="id-17" class="web">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/7.jpg" alt="" />
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/7.jpg" alt="" />
 						</em>
                         <span>
                             <strong>{django内置auth}</strong>
@@ -184,8 +189,8 @@
                     </a>
                 </li>
 				<li data-id="id-18" class="嵌入式">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/3.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/3.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>
@@ -193,8 +198,8 @@
                     </a>
                 </li>
                 <li data-id="id-19" class="django">
-                    <a href="portfolio_item.html">
-                    	<em class="overflow-hidden"><img src="/static/img/2.jpg" alt="" /></em>
+                    <a href="/learn">
+                    	<em class="overflow-hidden" title="点击查看详情"><img src="/static/img/2.jpg" alt="" /></em>
                         <span>
                             <strong>{django内置auth}</strong>
                             <i>{django内置auth的使用和注意事项}</i>

@@ -1,0 +1,275 @@
+<!--======具体学习内容页面======-->
+
+{% extends 'unifylayout.html' %}
+<!--==动态加载title的方法-->
+{% block title %}unify content page{% endblock title %}
+
+{% block content %}
+
+<!--=== Breadcrumbs快捷栏界面表头 ===-->
+<div class="breadcrumbs margin-bottom-20">
+    <div class="container">
+        <h1 class="color-green pull-left">{具体课程内容}</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="/">主页</a> <span class="divider">/</span></li>
+            <li><a href="/lesson">课程</a> <span class="divider">/</span></li>
+            <li class="active">{具体课程内容}</li>
+        </ul>
+    </div><!--/container-->
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+<!--=== Content Part正文部分 ===-->
+<div class="container">     
+    <div class="row-fluid blog-page blog-item">
+        <!-- Left Sidebar -->
+        <!-- TAB页面切换显示开始 -->
+    <div class="span9">
+             <div class="headline"><h3>{具体课程内容}</h3></div>
+            <ul class="nav nav-tabs tabs">
+                <li class="active"><a href="#第一课" data-toggle="tab">第一课</a></li>
+                <li><a href="#第二课" data-toggle="tab">第二课</a></li>
+                <li><a href="#第三课" data-toggle="tab">第三课</a></li>
+                <li><a href="#第四课" data-toggle="tab">第四课</a></li>
+            </ul><!--/tabs-->
+            
+            <div class="tab-content margin-bottom-20">
+                <div class="tab-pane active" id="第一课">
+                     <h4>第一课</h4>
+                    <div class="blog-img">
+
+                     <a class="fancybox-button zoomer" data-rel="fancybox-button" title="点击查看详情" href="/static/img/blog2.jpg">
+                        <div class="overlay-zoom">  
+                            <img src="/static/img/blog2.jpg" alt="" />
+                            <div class="zoom-icon"></div>                   
+                        </div>                                              
+                    </a>
+                    </div>
+                <p>At vero eos et accusamus et iusto odio dignissibigmos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi,</p>
+
+                <blockquote class="hero">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit posuere erat a ante.</p>
+                    <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+                </blockquote>
+
+                <p>Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias feugiat. Pellentesque viverra vehicula sem ut v.</p> <h3 id="title_0.0.1">依赖：</h3>
+<p>Linux开发平台:                你需要预备mysql数据库环境；python 2.x;</p>
+<p>Window平台: python2.x; Django-1.4.5; mysql数据库环境</p>
+<h3 id="title_0.0.2">参考</h3>
+<p><a href="http://www.djangobook.com/en/2.0/index.html">http://www.djangobook.com/en/2.0/index.html</a></p>
+<h3 id="title_0.0.3">安装</h3>
+<pre class="prettyprint linenums pre-scrollable"><code>sudo easy_install django</code></pre>
+<h3 id="title_0.0.4">开始项目</h3>
+<p>Linux平台</p>
+<hr/>
+<pre class="prettyprint linenums pre-scrollable"><code>peter@智普教育:~$ django-admin.py startproject jeapsns
+peter@智普教育:~$ cd jeapsns/
+peter@智普教育:~/jeapsns$ ls
+jeapsns  manage.py
+peter@智普教育:~/jeapsns$ cd jeapsns/
+peter@智普教育:~/jeapsns/jeapsns$ ls
+__init__.py  settings.py  urls.py  wsgi.py
+peter@智普教育:~/jeapsns/jeapsns$ cd ..
+peter@智普教育:~/jeapsns$</code></pre>
+<hr/>
+<h3 id="title_0.0.5">run</h3>
+<pre class="prettyprint linenums pre-scrollable"><code>peter@智普教育:~/jeapsns$ python manage.py runserver</code></pre>
+<pre class="prettyprint linenums pre-scrollable"><code>peter@peter-IPM41-D3:~/jeapsns$ python manage.py runserver 192.168.2.201:8000</code></pre>
+<p><img src="http://uliweb.clkg.org/uploads/tutorials/20/4d89427a3fd011e2afc0f23c9193818f.png"/>
+</p>
+
+                    <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>Well done!</strong> 开始学习，本章节的学习重点是。。容易出错和技术亮点是。。。学习后可以做 出什么东东～～
+                    </div>                  
+                </div>
+                <div class="tab-pane" id="第二课">
+                    <div class="blog-img">
+
+                     <a class="fancybox-button zoomer" data-rel="fancybox-button" title="点击查看详情" href="/static/img/blog1.jpg">
+                        <div class="overlay-zoom">  
+                            <img src="/static/img/blog1.jpg" alt="" />
+                            <div class="zoom-icon"></div>                   
+                        </div>                                              
+                    </a>
+                    </div>
+
+                    <!-- <p><img class="pull-left rgt-img-margin img-width-200" src="/static/img/4.jpg" alt="" />  -->
+                    <p>
+                    <strong>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id.</strong> Donec eget orci metus, Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, consectetur id. Donec eget orci metus, ac adipiscing nunc. <strong>Pellentesque fermentum</strong>, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper.</p>
+
+                
+                <h3 id="title_0.0.1">Windows上安装Django:</h3>
+<p>首先切换到Django安装包所在目录: 举例:</p>
+<p><img src="http://uliweb.cpython.org/uploads/tutorials/20/6e769320861b11e2a2b6f23c9170add4.png"/>
+</p>
+<p>然后运行:</p>
+<hr/>
+<p><code>python setup.py install</code></p>
+<hr/>
+<h4 id="title_0.0.1.1"> 查看Django的版本:</h4>
+<hr/>
+<p><code>import django</code></p>
+<p><code>print django.VERSION</code></p>
+<hr/>
+<p>比如:   <img src="http://uliweb.cpython.org/uploads/tutorials/20/a2cb1882861e11e2a905f23c9170add4.png"/>
+</p>
+<p>建立一个django的开发目录,直接运行:</p>
+<p><code>django-admin.py startproject mysite</code></p>
+<p>出现:</p>
+<p><img src="http://uliweb.cpython.org/uploads/tutorial/20/93c20512862311e2bf63f23c9170add4.png"/>
+</p>
+<p>这个时候你需要在Python安装目录的scripts找到django-admin.py将其添加到PATH中</p>
+<p><img src="http://uliweb.cpython.org/uploads/tutorial/20/318a2590862411e2bf63f23c9170add4.png"/>
+</p>
+<p><img src="http://uliweb.cpython.org/uploads/tutorial/20/93f49522862311e28829f23c9170add4.png"/>
+</p>
+<p>然后再次运行创建开发site：</p>
+<p><img src="http://uliweb.cpython.org/uploads/tutorial/20/93f5576e862311e2809ef23c9170add4.png"/>
+</p>
+                    <h4><em>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</em></h4>
+                    <ul>
+                        <li>Ut adipiscing elit magna sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat.</li>
+                        <li>Lusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</li>
+                        <li>Praesentium voluptatum deleniti atque corrupti quos</li>
+                    </ul>
+
+                <blockquote class="hero">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit posuere erat a ante.</p>
+                    <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+                </blockquote>
+
+                    <p>Iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non ipsum dolor sit amet. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat <a href="#">consectetur adipiscing elit</a>.</p>  
+                    <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>Well done!</strong> 开始学习，本章节的学习重点是。。容易出错和技术亮点是。。。学习后可以做 出什么东东～～
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="第三课">
+                    <h4>第三课</h4>
+                    <p><img class="pull-right rgt-img-margin img-width-200" src="/static/img/4.jpg" alt="" /> <strong>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id.</strong> Donec eget orci metus, Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, consectetur id. Donec eget orci metus, ac adipiscing nunc. <strong>Pellentesque fermentum</strong>, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper.</p>
+
+                    <h4>Molestias excepturi sint</h4>
+                    <p>django的访问地址和对应的函数需要做一张表。放在urls.py里面。</p>
+<h3 id="title_0.0.1">views.py 里面写的函数</h3>
+<pre class="prettyprint linenums pre-scrollable"><code>from django.http import HttpResponse
+def hello(request):
+    return HttpResponse("Hello world")</code></pre>
+<p>如何才能访问到这个函数？</p>
+<h3 id="title_0.0.2">urls.py</h3>
+<pre class="prettyprint linenums pre-scrollable"><code>from jeapsns.views import hello
+urlpatterns = patterns('',
+        (r'^hello/$', hello),</code></pre>
+<p>本规则遵从re。。。。</p>
+<pre class="prettyprint linenums pre-scrollable"><code>Symbol   Matches
+. (dot)     一个单个的数字或者字母
+\d         单个的数字
+[A-Z]   大写字母
+[a-z]   小写字母
+[A-Za-z]    所有字母
++   一个或者更多的 (e.g., \d+ 1个或者多个数字)
+[^/]+   /之前可以是很多字符
+?   0或者1个 (e.g., \d? matches 0或者1个数字)
+*   0，1，更多 (e.g., \d* 0，1，更多的数字)
+{1,3}   在1，3之间都可以 (e.g., \d{1,3} 1，2，3)</code></pre>
+<p>例子：</p>
+<pre class="prettyprint linenums pre-scrollable"><code>(r'^$',index),</code></pre>
+<p>访问：http://127.0.0.1:8000</p>
+<pre class="prettyprint linenums pre-scrollable"><code>(r'^.$',index),</code></pre>
+<p><a href="http://127.0.0.1:8000/1">http://127.0.0.1:8000/1</a></p>
+<p><a href="http://127.0.0.1:8000/a">http://127.0.0.1:8000/a</a></p>
+<p>加任何一个字母数字。。等。</p>
+<pre class="prettyprint linenums pre-scrollable"><code>(r'^time/(get)/(\d{1,2})/$',current_time),</code></pre>
+<p>带参数：</p>
+<pre class="prettyprint linenums pre-scrollable"><code>def current_time(request,string,offset):
+        print offset,string
+        try:
+                offset = int(offset)
+        except ValueError:
+                raise Http404()
+         
+        dt = datetime.datetime.now()
+        html = "&lt;html&gt;&lt;body&gt;In %s hour(s), it will be %s.&lt;/body&gt;&lt;/html&gt;" % (offset, dt)
+        return HttpResponse(html)</code></pre>
+<p>网址： <a href="http://127.0.0.1:8000/time/get/1/">http://127.0.0.1:8000/time/get/1/</a></p>
+<p>如果不希望get作为参数可以不加()。</p>
+<p>请大家自己实验一下，get不加上()的情况。</p>
+                
+                    <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Well done!</strong> 开始学习，本章节的学习重点是。。容易出错和技术亮点是。。。学习后可以做 出什么东东～～
+                    </div>
+                </div>
+                <div class="tab-pane" id="第四课">
+                    <h4>第四课</h4>
+                    <p><img class="pull-right rgt-img-margin img-width-200" src="/static/img/6.jpg" alt="" /> <strong>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id.</strong> Donec eget orci metus, Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, consectetur id. Donec eget orci metus, ac adipiscing nunc. <strong>Pellentesque fermentum</strong>, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, ante ac interdum ullamcorper.</p>
+
+                    <h4>Vehicula sem ut volutpat</h4>
+                   
+                    <p>Templates 使用模板可以把django 的动态数据替换到一个成型的网页里面。</p>
+<p>例如当用户输入自己的名字的时候，你可以把它显示到你要的位置。</p>
+<h3 id="title_0.0.1">在views.py里面添加模板</h3>
+<pre class="prettyprint linenums pre-scrollable"><code>from django.template import Template, Context
+def index_temp(request,input_name):
+        t = Template('My name is {{ name }}.')
+        c = Context({'name': input_name})
+        return HttpResponse(t.render(c))</code></pre>
+<p>t是一个模板。 其中{{name}} 里面的是变量。 我用c里面的字典key 'name' 的值来替换 t.</p>
+<p>函数index_temp 是一个带参数的函数。</p>
+<h3 id="title_0.0.2">在 urls.py 添加如下内容</h3>
+<pre class="prettyprint linenums pre-scrollable"><code>from jeapsns.views import hello,index,current_time,index_temp
+(r'^index_temp/([a-z]{1,10})$',index_temp),</code></pre>
+<p>（[a-z]{1,10}）, 圆括号代表参数，[a-z]规则是字母，{1,10}个数是1-10个。</p>
+<p>访问：</p>
+<p><a href="http://127.0.0.1:8000/index_temp/jike">http://127.0.0.1:8000/index_temp/jike</a></p>
+<p>显示：</p>
+<pre class="prettyprint linenums pre-scrollable"><code>My name is jike.</code></pre>
+<p>增加一个新的参数：</p>
+<p>urls.py,views.py</p>
+<pre class="prettyprint linenums pre-scrollable"><code> (r'^index_temp/([a-z]{1,10})/(\d{1,6})$',index_temp),
+
+--
+def index_temp(request,input_name,color):
+        t = Template('My name is&lt;font color =#{{color}}&gt; {{ name }}.&lt;/font&gt;')
+        c = Context({'name': input_name,'color':color})
+        return HttpResponse(t.render(c))</code></pre>
+<p>浏览： <a href="http://127.0.0.1:8000/index_temp/jike/009900">http://127.0.0.1:8000/index_temp/jike/009900</a></p>
+<p><img src="http://uliweb.cpython.org/uploads/tutorials/20/7fa0aee4432511e29bd5f23c9193818f.png"/>
+</p>
+<h3 id="title_0.0.3">使用模板文件</h3>
+<p>views.py</p>
+<pre class="prettyprint linenums pre-scrollable"><code>from django.shortcuts import render_to_response
+def index_temp_file(request,color):
+        return render_to_response('index_temp_file.html', {'color':color})</code></pre>
+<p>仅仅使用一个参数</p>
+<p>urls.py</p>
+<pre class="prettyprint linenums pre-scrollable"><code> (r'^index_temp_file/(\d{1,6})$',index_temp_file),</code></pre>
+<p>修改settings.py 文件，添加template目录。</p>
+<pre class="prettyprint linenums pre-scrollable"><code>TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    '/home/peter/jeapsns/template'
+)</code></pre>
+<p>文件 vim template/index_temp_file.html 内容如下：</p>
+<pre class="prettyprint linenums pre-scrollable"><code>&lt;title&gt;Jeapsns -by django&lt;/title&gt;
+&lt;h1&gt;&lt;font color=#{{color}}&gt;Django ,uliweb jeapedu.com&lt;/font&gt;&lt;/h1&gt;</code></pre>
+<p><img src="http://uliweb.cpython.org/uploads/tutorials/20/3e0135d6432911e29bd5f23c9193818f.png"/>
+</p>
+                    <p>Iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non ipsum dolor sit amet. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat <a href="#">consectetur adipiscing elit</a>.</p><br /> 
+
+                     <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>Well done!</strong> 开始学习，本章节的学习重点是。。容易出错和技术亮点是。。。学习后可以做 出什么东东～～
+                    </div>
+                </div>
+            </div><!--/tab-content TAB页面切换显示结束-->
+            </div><!--span9 end-->
+
+        <!-- Right Sidebar 右侧下拉栏-->
+        {%include "right_sidebar.html"%}
+    </div><!--/row-fluid-->        
+</div><!--/container-->     
+<!--=== End Content Part ===-->
+{% endblock %}
