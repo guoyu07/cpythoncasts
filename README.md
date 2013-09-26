@@ -1,7 +1,7 @@
 ##网站开发信息说明：
 - 网站开发信息说明由zhangtianyi1234执笔，时间2013年8月
 - 网站开发所用技术文档和需要install的组件在requirements.txt中，我会在后期添加补全
-- linux开发环境下可以非常方便的，直接在控制台$sudo pip install requirements.txt就可以安装所需要的组件
+- linux开发环境下可以非常方便的在控制台$sudo pip install requirements.txt就可以安装所需要的组件
 - 建议python django开发者使用linux系统，pyhton和django开发者使用的OS操作系统django官网上有统计，linux系统是占比绝大多数的系统
 
 
@@ -81,8 +81,7 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">不可缺少，否则特效不能显示.
   - 现在问题解决，方法是本地static里面加载font字体文件夹和fontswesome.min.css,具体参见http://www.bootcss.com/p/font-awesome/
   - CSS样式和JS在开发阶段，基本是本地加载，服务器上线后，需要相应调整成百度cdn地址
-  - static部分以及用户上传下载的文件，videos以及其他，需要单独集合到media目录，集中化管理
-		
+  - static部分以及用户上传下载的文件，videos以及其他，需要单独集合到media目录，集中化管理	
   - 2.fontawesome在firefox浏览器上不支持，开发者解决方法有2种：
   - 一种是在nginx服务器端加入资源源支持语句，使得firefox可以支持fontawesome字体;
   - 二，开发过程中在static目录下加入font字体，导入fontawesome字体，具体做法可以google搜索“firefox不支持fontawesome”

@@ -23,7 +23,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-
+    url(r'^setting/',include('setting.urls')),
     url(r'^accounts/', include('accounts.urls')),
 #以下是主页页面等信息
 	url(r'^$',unify),
@@ -31,7 +31,7 @@ urlpatterns = patterns('',
 	url(r'^lesson/$', unifylesson),
     url(r'^learn/$', unifylearn),
     url(r'^blog/$', unifyblog),
-	url(r'^teachers/$', unifyteachers),
+    url(r'^teachers/$', unifyteachers),
 #以下是login等信息
     url(r'^login/$',unifylogin),
     url(r'^register/$',unifyregister),

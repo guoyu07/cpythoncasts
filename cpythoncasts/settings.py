@@ -147,6 +147,7 @@ LOCAL_APPS=(
     'cpythoncasts',
     'accounts',
     'exam',
+    'setting',
 )
 INSTALLED_APPS = DJANGO_APPS + THIRD_PART_APPS + LOCAL_APPS
 # A sample logging configuration. The only tangible logging
