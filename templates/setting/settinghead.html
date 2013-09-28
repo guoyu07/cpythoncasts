@@ -2,22 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title> {{page}}</title>
+<title>{page}</title>
 
 <meta name="description" content="overview &amp; stats" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<link rel="stylesheet" href="/static/css/settingCSS/jquery-ui-1.10.3.custom.min.css" />
-<link rel="stylesheet" href="/static/css/settingCSS/jquery.gritter.css" />
-<link rel="stylesheet" href="/static/css/settingCSS/select2.css" />
-<link rel="stylesheet" href="/static/css/settingCSS/bootstrap-editable.css" />
-
 <!-- fonts -->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
 
 <!-- basic styles -->
-
 <link rel="stylesheet" href="/static/css/font-awesome.css">
+<link rel="stylesheet" href="/static/css/settingCSS/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" href="/static/css/settingCSS/jquery.gritter.css" />
+<link rel="stylesheet" href="/static/css/settingCSS/select2.css" />
+<link rel="stylesheet" href="/static/css/settingCSS/bootstrap-editable.css" />
 <link rel="stylesheet" href="/static/css/settingCSS/bootstrap.min.css">
 <link rel="stylesheet" href="/static/css/settingCSS/font-awesome.min.css">
 <link rel="stylesheet" href="/static/css/settingCSS/ace.min.css" />
@@ -29,7 +26,6 @@
         <![endif]-->
 
 <!-- page specific plugin styles -->
-
 
 <!--[if lte IE 8]>
           <link rel="stylesheet" href="/static/js/settingCSS/ace-ie.min.css" />
@@ -48,3 +44,467 @@
         <script src="/static/js/settingJS/respond.min.js"></script>
         <![endif]-->
 </head>
+<div class="navbar navbar-default" id="navbar">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('navbar', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-header pull-left">
+            <a href="#" class="navbar-brand"> <small> <i
+                    class="icon-sitemap"></i> admin管理页面
+            </small>
+            </a>
+            <!-- /.brand -->
+        </div>
+        <!-- /.navbar-header -->
+
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="grey"><a data-toggle="dropdown"
+                    class="dropdown-toggle" href="#"> <i class="icon-tasks"></i> <span
+                        class="badge badge-grey">4</span>
+                </a>
+
+                    <ul
+                        class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header"><i class="icon-ok"></i> 4 个任务等待完成
+                        </li>
+
+                        <li><a href="#">
+                                <div class="clearfix">
+                                    <span class="pull-left">文件上传</span> <span class="pull-right">65%</span>
+                                </div>
+
+                                <div class="progress progress-mini ">
+                                    <div style="width: 65%" class="progress-bar "></div>
+                                </div>
+                        </a></li>
+
+                        <li><a href="#">
+                                <div class="clearfix">
+                                    <span class="pull-left">文件更新</span> <span class="pull-right">35%</span>
+                                </div>
+
+                                <div class="progress progress-mini ">
+                                    <div style="width: 35%"
+                                        class="progress-bar progress-bar-danger"></div>
+                                </div>
+                        </a></li>
+
+                        <li><a href="#">
+                                <div class="clearfix">
+                                    <span class="pull-left">单元信息</span> <span class="pull-right">15%</span>
+                                </div>
+
+                                <div class="progress progress-mini ">
+                                    <div style="width: 15%"
+                                        class="progress-bar progress-bar-warning"></div>
+                                </div>
+                        </a></li>
+
+                        <li><a href="#">
+                                <div class="clearfix">
+                                    <span class="pull-left">问题处理</span> <span class="pull-right">90%</span>
+                                </div>
+
+                                <div class="progress progress-mini progress-striped active">
+                                    <div style="width: 90%"
+                                        class="progress-bar progress-bar-success"></div>
+                                </div>
+                        </a></li>
+
+                        <li><a href="#"> 查看所有任务信息 <i class="icon-arrow-right"></i>
+                        </a></li>
+                    </ul></li>
+
+                <li class="purple"><!-- ==闹铃提示 -->
+                     <a data-toggle="dropdown" class="dropdown-toggle"
+                    href="#"> <i class="icon-bell-alt icon-animated-bell"></i> <span
+                        class="badge badge-important">8</span>
+                </a>
+
+                    <ul
+                        class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header"><i class="icon-warning-sign"></i>
+                            8 个提醒信息</li>
+
+                        <li><a href="#">
+                                <div class="clearfix">
+                                    <span class="pull-left"> <i
+                                        class="btn btn-xs no-hover btn-pink icon-comment"></i> 新的评论
+                                    </span> <span class="pull-right badge badge-info">+12</span>
+                                </div>
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="btn btn-xs btn-primary icon-user"></i> {username} 更新了相应信息
+                                ...
+                        </a></li>
+
+                        <li><a href="#">
+                                <div class="clearfix">
+                                    <span class="pull-left"> <i
+                                        class="btn btn-xs no-hover btn-success icon-shopping-cart"></i>
+                                        新的视频添加
+                                    </span> <span class="pull-right badge badge-success">+8</span>
+                                </div>
+                        </a></li>
+
+                        <li><a href="#">
+                                <div class="clearfix">
+                                    <span class="pull-left"> <i
+                                        class="btn btn-xs no-hover btn-info icon-twitter"></i> 点击量
+                                    </span> <span class="pull-right badge badge-info">+11</span>
+                                </div>
+                        </a></li>
+
+                        <li><a href="#"> 查看所有提示信息 <i class="icon-arrow-right"></i>
+                        </a></li>
+                    </ul>
+                </li>
+                <!-- #=notification提示闹铃 end -->
+
+                <li class="green"><!-- ==站内信 -->
+                     <a data-toggle="dropdown" class="dropdown-toggle"
+                    href="#"> <i class="icon-envelope icon-animated-vertical"></i>
+                        <span class="badge badge-success">5</span>
+                </a>
+
+                    <ul
+                        class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header"><i class="icon-envelope-alt"></i>
+                            5 个站内消息</li>
+
+                        <li><a href="#"> <img src="/static/img/avatar.png"
+                                class="msg-photo" alt="Alex's Avatar" /> <span class="msg-body">
+                                    <span class="msg-title"> <span class="blue">{username}:</span>
+                                        {content.comments}...
+                                </span> <span class="msg-time"> <i class="icon-time"></i> <span>a
+                                            moment ago</span>
+                                </span>
+                            </span>
+                        </a></li>
+
+                        <li><a href="#"> <img src="/static/img/avatar3.png"
+                                class="msg-photo" alt="Susan's Avatar" /> <span
+                                class="msg-body"> <span class="msg-title"> <span
+                                        class="blue">{username}:</span> {content.comments}...
+                                </span> <span class="msg-time"> <i class="icon-time"></i> <span>20
+                                            minutes ago</span>
+                                </span>
+                            </span>
+                        </a></li>
+
+                        <li><a href="#"> <img src="/static/img/avatar4.png"
+                                class="msg-photo" alt="Bob's Avatar" /> <span class="msg-body">
+                                    <span class="msg-title"> <span class="blue">{username}:</span>
+                                        {content.comments}...
+                                </span> <span class="msg-time"> <i class="icon-time"></i> <span>3:15
+                                            pm</span>
+                                </span>
+                            </span>
+                        </a></li>
+
+                        <li><a href="inbox.html"> 查看所有站内消息 <i
+                                class="icon-arrow-right"></i>
+                        </a></li>
+                    </ul>
+                </li>
+                <!-- #==站内消息 end -->
+
+                <li class="light-blue"><a data-toggle="dropdown" href="#"
+                    class="dropdown-toggle"> <img class="nav-user-photo"
+                        src="/static/img/user.jpg" alt="Jason's Photo" /> <span
+                        class="user-info"> <small>欢迎,</small> {uername}
+                    </span> <i class="icon-caret-down"></i>
+                </a>
+
+                    <ul
+                        class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li><a href="#"> <i class="icon-cog"></i> 设置
+                        </a></li>
+
+                        <li><a href="#"> <i class="icon-user"></i> 用户信息
+                        </a></li>
+
+                        <li class="divider"></li>
+
+                        <li><a href="#"> <i class="icon-off"></i> 退出
+                        </a></li>
+                    </ul></li>
+            </ul>
+            <!-- /.ace-nav -->
+        </div>
+        <!-- /.navbar-header -->
+    </div>
+    <!-- /.container -->
+</div>
+
+<!--==左侧栏目条和header-->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#"> <span
+            class="menu-text"></span>
+        </a>
+
+        <div class="sidebar" id="sidebar">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('sidebar', 'fixed')
+                } catch (e) {
+                }
+            </script>
+
+            <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+                <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                    <button class="btn btn-success">
+                        <i class="icon-signal"></i>
+                    </button>
+
+                    <button class="btn btn-info">
+                        <i class="icon-pencil"></i>
+                    </button>
+
+                    <button class="btn btn-warning">
+                        <i class="icon-group"></i>
+                    </button>
+
+                    <button class="btn btn-danger">
+                        <i class="icon-cogs"></i>
+                    </button>
+                </div>
+
+                <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                    <span class="btn btn-success"></span> <span class="btn btn-info"></span>
+
+                    <span class="btn btn-warning"></span> <span class="btn btn-danger"></span>
+                </div>
+            </div>
+            <!-- #sidebar-shortcuts ends-->
+            <!--==nav list start-->
+            <ul class="nav nav-list">
+                <li ><a href="#"> <i class="icon-dashboard"></i> <span
+                        class="menu-text"> 主显示界面 </span>
+                </a></li>
+                
+                <li><a href="#"> <i class="icon-user"></i> <span
+                        class="menu-text"> 用戶信息 </span>
+                </a></li>
+                
+                <li class="active open"><a href="#" class="dropdown-toggle"> <i
+                        class="icon-list"></i> <span class="menu-text"> 数据列表 </span> <b
+                        class="arrow icon-angle-down"></b>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 简单列表
+                        </a></li>
+
+                        <li class="active"><a href="#"> <i
+                                class="icon-double-angle-right"></i> jqGrid动态列表
+                        </a></li>
+                    </ul></li>
+                <li><a href="#" class="dropdown-toggle"> <i
+                        class="icon-edit"></i> <span class="menu-text"> 表单选项 </span>
+                        <b class="arrow icon-angle-down"></b>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 表单样式
+                        </a></li>
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 进度图 &amp; 表单验证
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 正常显现 &amp; Markdown
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i>文件上傳
+                        </a></li>
+                    </ul></li>
+                    
+                <li><a href="#"> <i
+                                class="icon-question-sign"></i> FAQ问题反馈
+                        </a></li>               
+                <li><a href="#"> <i class="icon-text-width"></i>
+                        <span class="menu-text"> 样式模板 </span>
+                </a></li>
+
+                <li ><a href="#" class="dropdown-toggle">
+                        <i class="icon-desktop"></i> <span class="menu-text"> UI元素</span> <b class="arrow icon-angle-down"></b>
+                </a>
+
+                    <ul class="submenu">
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 显示元素
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 按钮框 &amp; 图标
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 树状图
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> jQuery UI
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 嵌套列表
+                        </a></li>
+
+                        <li><a href="#" class="dropdown-toggle"> <i
+                                class="icon-double-angle-right"></i> 三级树状 <b
+                                class="arrow icon-angle-down"></b>
+                        </a>
+
+                            <ul class="submenu">
+                                <li><a href="#"> <i class="icon-leaf"></i> 物品 #1
+                                </a></li>
+
+                                <li><a href="#" class="dropdown-toggle"> <i
+                                        class="icon-pencil"></i> 第4级 <b
+                                        class="arrow icon-angle-down"></b>
+                                </a>
+
+                                    <ul class="submenu">
+                                        <li><a href="#"> <i class="icon-plus"></i> 添加产品
+                                        </a></li>
+
+                                        <li><a href="#"> <i class="icon-eye-open"></i> 查看物品
+                                        </a></li>
+                                    </ul></li>
+                            </ul></li>
+                    </ul></li>
+
+
+                <li><a href="#"> <i class="icon-list-alt"></i> <span
+                        class="menu-text"> 视图界面 </span>
+                </a></li>
+
+                <li><a href="#"> <i class="icon-calendar"></i>
+
+                        <span class="menu-text"> 日历 <span
+                            class="badge badge-transparent tooltip-error"
+                            title="2&nbsp;Important&nbsp;Events"> <i
+                                class="icon-warning-sign red bigger-130"></i>
+                        </span>
+                    </span>
+                </a></li>
+
+                <li><a href="#"> <i class="icon-picture"></i> <span
+                        class="menu-text"> 图片集 </span>
+                </a></li>
+
+                <li><a href="#" class="dropdown-toggle"> <i
+                        class="icon-tag"></i> <span class="menu-text"> 更多页面 </span>
+
+                        <b class="arrow icon-angle-down"></b>
+                </a>
+                    <ul class="submenu">
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> Email站内信
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 产品价格列表
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 税单
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 时间表
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 登录 &amp; 退出
+                        </a></li>
+                    </ul></li>
+
+                <li><a href="#" class="dropdown-toggle"> <i
+                        class="icon-file-alt"></i> <span class="menu-text"> 其他页面
+                             <span class="badge badge-primary ">4</span>
+                    </span> <b class="arrow icon-angle-down"></b>
+                </a>
+
+                    <ul class="submenu">
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 404页面
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 500页面
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 方格图
+                        </a></li>
+
+                        <li><a href="#"> <i
+                                class="icon-double-angle-right"></i> 空白页面
+                        </a></li>
+                    </ul></li>
+            </ul>
+            <!-- /.nav-list -->
+
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="icon-double-angle-left"
+                    data-icon1="icon-double-angle-left"
+                    data-icon2="icon-double-angle-right"></i>
+            </div>
+
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('sidebar', 'collapsed')
+                } catch (e) {
+                }
+            </script>
+        </div>
+        <!--==navbar list end-->
+        <!--==top content breadcrumbs-->
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {
+                    }
+                </script>
+
+                <ul class="breadcrumb">
+                    <li><i class="icon-home home-icon"></i> <a href="#">主页</a></li>
+
+                    <li><a href="#">{具体快捷栏目}</a></li>
+                    <li class="active">{栏目分类}</li>
+                </ul>
+                <!-- .breadcrumb -->
+
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+                        <span class="input-icon"> <input type="text"
+                            placeholder="输入搜索信息 ..." class="nav-search-input"
+                            id="nav-search-input" autocomplete="off" /> <i
+                            class="icon-search nav-search-icon"></i>
+                        </span>
+                    </form>
+                </div>
+                <!-- #nav-search -->
+            </div>

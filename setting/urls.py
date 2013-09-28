@@ -13,8 +13,9 @@ urlpatterns =patterns('',
     url(r'tabs/(?P<pk>\d+)/$', VideoView.Update.as_view(), name='set_video_update'),
     url(r'tabs/(?P<pk>\d+)/delete/$', VideoView.Delete.as_view(), name='set_video_delete'),
    
-    url(r'form/$', QuestionView.List.as_view(), name='FAQ'),
+    url(r'form/$', QuestionView.List.as_view(), name='formstyle1'),
     url(r'form/add/$', QuestionView.Create.as_view(), name='set_question_add'),
     url(r'from/(?P<pk>\d+)/$', QuestionView.Update.as_view(), name='set_question_update'),
     url(r'from/(?P<pk>\d+)/delete/$', QuestionView.Delete.as_view(), name='set_question_delete'),
+    url(r'faq/$',faqquestion),
 )

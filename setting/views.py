@@ -113,7 +113,7 @@ class VideoView:
 class QuestionView:
         class List(ListView):
             model = Question
-            template_name = "setting/FAQ.html" 
+            template_name = "setting/formstyle1.html" 
             fields = ['title', 'answerkey', 'status', 'types', 'category']
         def get_queryset(self):
             return self.model.objects.filter(user=self.request.user)
@@ -125,7 +125,7 @@ class QuestionView:
 
         class Create(CreateView):
                 model = Question
-                template_name = "setting/formstyl1.html" 
+                template_name = "setting/formstyle1.html" 
                 fields = ['title', 'answerkey', 'status', 'types', 'category']
         def get_context_data(self, **kwargs):
             context = super(QuestionView.Create, self).get_context_data(**kwargs)
@@ -162,4 +162,7 @@ class QuestionView:
             info = set_common(self.request)
             objects = Quesiton.objects.filter(id=self.kwargs.get('pk'), \
             user=self.request.user)
-            return objects            
+            return objects          
+
+def faqquestion(request):#faq page
+     return render_to_response('setting/FAQ.html',context_instance=RequestContext(request))
