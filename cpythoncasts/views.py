@@ -23,12 +23,29 @@ def unify(request):#unify主页
     retdata = get_retdata('unify')
     retdata['username'] = request.user.username
     retdata['id']       = request.user.id
+    try:
+    	new1   = Video.objects.get(keyword='new1')
+    	retdata['new1'] = new1
+    	new2   = Video.objects.get(keyword='new2')
+    	retdata['new2'] = new2
+    	new3   = Video.objects.get(keyword='new2')
+    	retdata['new3'] = new3
+    	new4   = Video.objects.get(keyword='new4')
+    	retdata['new4'] = new4
+    except:
+	pass
+
     return render_to_response("unify.html",retdata) 
 
 def unifyallvideos(request):#unify视频页面
     retdata = get_retdata('unifyallvideos')
     return render_to_response('unifyallvideos.html',retdata,context_instance=RequestContext(request))
 
+def unifyallvideo(request,id):#unify视频页面
+    retdata = get_retdata('unifyallvideos')
+    video   = Video.objects.get(id=id)
+    retdata['video'] = video 
+    return render_to_response('unifyvideo.html',retdata,context_instance=RequestContext(request))
 def unifylesson(request):#unifylesson页面
     retdata = get_retdata('unifylesson')
     return render_to_response('unifylesson.html',retdata,context_instance=RequestContext(request))
