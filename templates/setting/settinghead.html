@@ -55,7 +55,7 @@
     <div class="navbar-container" id="navbar-container">
         <div class="navbar-header pull-left">
             <a href="#" class="navbar-brand"> <small> <i
-                    class="icon-sitemap"></i> admin管理页面
+                    class="icon-sitemap"></i> 欢迎来到管理页面
             </small>
             </a>
             <!-- /.brand -->
@@ -141,7 +141,7 @@
                         </a></li>
 
                         <li><a href="#"> <i
-                                class="btn btn-xs btn-primary icon-user"></i> {username} 更新了相应信息
+                                class="btn btn-xs btn-primary icon-user"></i> {{username}} 更新了相应信息
                                 ...
                         </a></li>
 
@@ -181,7 +181,7 @@
 
                         <li><a href="#"> <img src="/static/img/avatar.png"
                                 class="msg-photo" alt="Alex's Avatar" /> <span class="msg-body">
-                                    <span class="msg-title"> <span class="blue">{username}:</span>
+                                    <span class="msg-title"> <span class="blue">{{username}}:</span>
                                         {content.comments}...
                                 </span> <span class="msg-time"> <i class="icon-time"></i> <span>a
                                             moment ago</span>
@@ -201,7 +201,7 @@
 
                         <li><a href="#"> <img src="/static/img/avatar4.png"
                                 class="msg-photo" alt="Bob's Avatar" /> <span class="msg-body">
-                                    <span class="msg-title"> <span class="blue">{username}:</span>
+                                    <span class="msg-title"> <span class="blue">{{username}}:</span>
                                         {content.comments}...
                                 </span> <span class="msg-time"> <i class="icon-time"></i> <span>3:15
                                             pm</span>
@@ -216,10 +216,10 @@
                 </li>
                 <!-- #==站内消息 end -->
 
-                <li class="light-blue"><a data-toggle="dropdown" href="#"
+                <li class="light-blue"><a data-toggle="dropdown" href="{%url 'set_profile_detail' id%}"
                     class="dropdown-toggle"> <img class="nav-user-photo"
                         src="/static/img/user.jpg" alt="Jason's Photo" /> <span
-                        class="user-info"> <small>欢迎,</small> {uername}
+                        class="user-info"> <small>欢迎,</small> {{username}}
                     </span> <i class="icon-caret-down"></i>
                 </a>
 
@@ -298,22 +298,26 @@
                         class="menu-text"> 主显示界面 </span>
                 </a></li>
                 
-                <li><a href="#"> <i class="icon-user"></i> <span
+                <li><a href="{%url 'set_profile_detail' id%}"> <i class="icon-user"></i> <span
                         class="menu-text"> 用戶信息 </span>
                 </a></li>
                 
                 <li class="active open"><a href="#" class="dropdown-toggle"> <i
-                        class="icon-list"></i> <span class="menu-text"> 数据列表 </span> <b
+                        class="icon-list"></i> <span class="menu-text"> 我的视频  </span> <b
                         class="arrow icon-angle-down"></b>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#"> <i
-                                class="icon-double-angle-right"></i> 简单列表
+			
+                        <li><a href="{%url 'set_video_list'%}"> <i
+                                class="icon-double-angle-right"></i> 所有视频
+                        </a></li>
+                        <li><a href="{%url 'set_video_add'%}"> <i
+                                class="icon-double-angle-right"></i> 添加视频
                         </a></li>
 
-                        <li class="active"><a href="#"> <i
+                        <!--li class="active"><a href="#"> <i
                                 class="icon-double-angle-right"></i> jqGrid动态列表
-                        </a></li>
+                        </a></li-->
                     </ul></li>
                 <li><a href="#" class="dropdown-toggle"> <i
                         class="icon-edit"></i> <span class="menu-text"> 表单选项 </span>
@@ -490,7 +494,7 @@
                 </script>
 
                 <ul class="breadcrumb">
-                    <li><i class="icon-home home-icon"></i> <a href="#">主页</a></li>
+                    <li><i class="icon-home home-icon"></i> <a href="{%url 'set_profile_detail' id%}">主页</a></li>
 
                     <li><a href="#">{具体快捷栏目}</a></li>
                     <li class="active">{栏目分类}</li>

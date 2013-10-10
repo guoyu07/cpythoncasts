@@ -12,7 +12,7 @@ class Userinfo(models.Model):
     role     = models.CharField(max_length=64)
 
     def get_absolute_url(self):
-          return reverse('set_info_update', kwargs={'pk': self.pk})
+          return reverse('set_profile_detail', kwargs={'pk': self.pk})
 
 
 class Video(models.Model):
@@ -28,5 +28,5 @@ class Video(models.Model):
 
 	
     def get_absolute_url(self):
-          return reverse('set_video_update', kwargs={'pk': self.pk})
+          return reverse('set_video_list')
 

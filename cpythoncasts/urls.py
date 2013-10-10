@@ -33,7 +33,7 @@ urlpatterns = patterns('',
     url(r'^blog/$', unifyblog),
     url(r'^teachers/$', unifyteachers),
 #以下是login等信息
-    url(r'^login/$',unifylogin),
+    url(r'^login/$',unifylogin,name='login'),
     url(r'^register/$',unifyregister),
     url(r'^logout/$',unifylogout),
 #以下是test页面等信息

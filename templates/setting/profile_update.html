@@ -221,17 +221,20 @@
                                                 <div class="widget-header widget-header-small">
                                                     <h4 class="smaller">
                                                         <i class="icon-check bigger-110"></i> 个人介绍
-                                                        | <a href={%url 'set_profile_update' id %}>修改</a> 
+                                                        <i class="icon-check bigger-110"></i> <a href={%url 'set_profile_update' id %}>修改</a> 
                                                     </h4>
                                                 </div>
 
                                                 <div class="widget-body">
                                                     <div class="widget-main">
-							{% if object.intro %}
-							{{object.intro|safe}}
-							{%else%}
-							<p>cpython常驻老师</p>
-							{%endif%}
+							<form action="" method="POST" enctype="multipart/form-data">
+						        {% csrf_token %}
+
+							{{form.intro}}
+							</p>
+							 <input class = "btn" id="save" type="submit" value="保存" />
+						        </form>
+
                                                     </div>
                                                 </div>
                                             </div>

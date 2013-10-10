@@ -69,7 +69,7 @@
             </li>   
 		{% if username %}
 			<li class="devider">&nbsp;</li>
-          欢迎 <font style='color:#72c028'>{{username}}</font> <li><a href="/logout/?next=/" class="login-btn">注销|<a href='/accounts/set'>账户设置</a></li>  
+          欢迎 <font style='color:#72c028'>{{username}}</font> <li><a href="/logout/?next=/" class="login-btn">注销|<a href='/accounts/profile/{{id}}/'>账户设置</a></li>  
 		{%else %}
           欢迎 游客，<li class="devider">&nbsp;</li>
             <li><a href="/login/?next=/" class="login-btn">登录</a></li>  

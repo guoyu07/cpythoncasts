@@ -25,6 +25,7 @@
 	<div class="row-fluid">
         <form class="log-page"method="post" action="">
 			{%csrf_token%}
+            <h3 style='color:red'>{{error}}</h3>    
             <h3>登录:</h3>    
             <div class="input-prepend">
                 <span class="add-on"><i class="icon-user"></i></span>

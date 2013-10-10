@@ -18,14 +18,11 @@ def get_retdata(active=None):
 		retdata[active] ='active'
 	return retdata
 
-def index(request):
-     
-    username = request.user.username
-    return render_to_response("index.html",{'username':username}) 
 
 def unify(request):#unify主页
     retdata = get_retdata('unify')
     retdata['username'] = request.user.username
+    retdata['id']       = request.user.id
     return render_to_response("unify.html",retdata) 
 
 def unifyallvideos(request):#unify视频页面
@@ -50,13 +47,16 @@ def unifyteachers(request):#unifyteachers页面
 
 #####user account matters
 def unifylogin(request):#unifylogin页面
+    error={}
     if request.method == 'POST':
            new_user = authenticate(username=request.POST['username'],
                                     password=request.POST['password'])
-           user_login(request, new_user)
-           return redirect("/")
+	   if new_user:
+           	user_login(request, new_user)
+           	return redirect("/")
+	   error={'error':'登录错误,请重新输入'}
 
-    return render_to_response('unifylogin.html',context_instance=RequestContext(request))
+    return render_to_response('unifylogin.html',error,context_instance=RequestContext(request))
 
 def unifyregister(request):#unifyregister页面
     form = UserForm()
