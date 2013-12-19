@@ -74,6 +74,10 @@ class QDeleteView(DeleteView):
 	def get_object(self):
                  objects    = self.model.objects.get(id=self.kwargs.get('pk'),\
                               author=self.request.user)
+		 if objects:
+		 	allas = Answers.objects.filter(questionid=self.kwargs.get('pk'))
+			for i in allas:
+				i.delete()
                  return objects
 
 
