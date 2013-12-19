@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="/rss" />
+    <!-- style -->
+    <link rel="stylesheet" href="http://cnodejs.qiniudn.com/public/stylesheets/index.min.c4a3bbf8.css" media="all" />
+
+    
+    <script src="http://cnodejs.qiniudn.com/public/index.min.608faa1f.js"></script>
+
+    
+    
+    <title>在线交流系统---codepark</title>
+
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class='navbar'>
+      <div class='navbar-inner'>
+        <div class='container'>
+          <form id='search_form' class='navbar-search' action="/">
+            <input type='text' id='q' name='q' class='search-query span3' value=''/>
+          </form>
+          <ul class='nav pull-right'>
+            <li><a href='/questions/list'>首页</a></li>
+           {%if user.username%}
+           <li><a href=''>{{user.username}}</a></li>
+           <li><a href='/logout?next=/questions/list'>注销</a></li>
+           {%else%}
+            <li><a href='/register?next=/questions/list'>注册</a></li>
+            <li><a href='/login?next=/questions/list'>登录</a></li>
+           {%endif%}
+          </ul>
+</div>
+</div>
+</div>
+<!-- wrapper -->
+<div id='wrapper'>
+<div id='main'>
+
+{%block content%}
+{%endblock%}
+
+ </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div id='backtotop'>回到顶部</div>
+    <div id='footer'>
+      <div id='footer_main'>
+        <div class="links">
+          <a class='dark' href=''><strong>关于</strong></a>
+          |
+          <a class='dark' href=''><strong>FAQ</strong></a>
+          |
+          <a class='dark' href='' target="_blank"><strong>RSS</strong></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

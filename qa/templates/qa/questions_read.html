@@ -1,0 +1,171 @@
+
+{% extends "layout_qa.html" %}
+
+{%block content%}
+
+        <div id='sidebar'>
+  <div class='panel'>
+    <div class='header'>
+      <span class='col_fade'>作者</span>
+    </div>
+    <div class='inner'>
+      <div class='user_card'>
+	<div>
+		<a  class='user_avatar'  href="">
+			<img src="http://cnodegravatar.u.qiniudn.com/avatar/19abd92b597f0e6771d238aa99fd098e?size=48" title="wghost" />
+		</a>
+		<span class='user_name'><a class='dark' href="">{{q.author.username}}</a></span>
+
+		
+
+		<div class='board clearfix'>
+			<div class='floor'>
+				<a href='/user/wghost/tags/'><span class='big'>0</span> 标签收藏</a>
+				<div class='space'></div>
+				<a href='/user/wghost/collections'><span class='big'>0</span> 话题收藏</a>
+			</div>
+			<div class='floor'>
+				<a href='/user/wghost/following'><span class='big'>0</span> 关注</a>
+				<div class='space'></div>
+				<a href='/user/wghost/follower'><span class='big'>0</span> 粉丝</a>
+				<div class='space'></div>
+				<span class='big'>5</span> 积分
+			</div>
+
+			
+		</div>
+	</div>
+</div>
+
+
+
+    </div>
+  </div>
+
+
+      
+</div>
+
+<div id='content'>
+  <div class='panel'>
+    <div class='header'>
+      <ul class='breadcrumb'>
+        <li><a href={%url 'questions-list'%}>主页</a><span class='divider'>/</span></li>
+        <li class='active'>话题详情</li>
+      </ul>
+    </div>
+    <div class='inner topic'>
+      <h3>
+       {{q.title}}
+      </h3>
+      <hr>
+      <div class='topic_content'>
+        <div class="markdown-text">
+	{{q.content}}
+	</div>
+      </div>
+      <hr>
+      <div class="tags">
+        
+        <span class='col_fade'>最低回复数目：<a class='put_top' href=''>{{q.min_people}}</a></span>  
+        
+      </div>
+      <div class="changes">
+        <span class='col_fade'>
+          <a class='dark' href=""></a> {{q.cd}}
+        </span>
+        
+      </div>
+      <div class="action">
+        
+      </div>
+    </div>
+  </div>  
+  
+  <div class='panel'>
+    <div class='header'>
+      <span class='col_fade'>{{q.counts}} 回复</span>
+    </div>
+
+{%for i in allas%}
+    <div class='cell reply_area reply_item' id="reply1" reply_id="52b1c5de588ff25a7215e9f3">
+  <a id="52b1c5de588ff25a7215e9f3"></a>
+  <div class='author_content'>
+    <div class='user_avatar block'>
+      <a href=""><img src="http://uliweb.cpython.org/uploads/portraits/3.50x50.jpg" title="chrome10086" /></a>
+    </div>
+    <div class='user_info'>
+      <span class='reply_author'>
+        <a class='dark' href="">{{i.author.username}}
+        </a>
+      </span>
+      <span class='col_fade'>
+        <a href="">{{i.cd}}</a>
+      </span>
+    </div>
+    <div class='user_action'>
+      {%if q.recommend == i.id %} 
+      <span>
+  	<a class='btn btn-danger' href=''>最佳答案</a>         </span>
+      {%endif%}
+      {%if user.username == q.author.username%} 
+      <span>
+  	<a class='' href={% url 'questions-recommend' q.id i.id %}>荐</a>         </span>
+      {%endif%}
+      <span class='col_fade'>#{{forloop.counter}}</span>
+    </div>
+  </div>
+  <div class='reply_content'>
+  <div class="markdown-text">
+	{%if q.counts >= q.min_people %} 
+		{{i.content}}
+	{%else%} 
+		回复人数不够，内容不可见 
+	{%endif%}
+  </div>
+  </div>
+  <div class='clearfix'>
+    <div class='reply2_area'>
+      
+      
+    </div>
+  </div>
+</div>
+
+{%endfor%}
+
+  </div>
+
+  <div class='panel'>
+    <div class='header'>
+      <span class='col_fade'>添加回复</span>
+    </div>
+    <div class='inner reply'>
+  <form action={%url 'answers-add' q.id %} method="post">
+	{% csrf_token %}
+	<div class='tab-content'>
+            <div class='tab-pane active' id='markdown'>
+
+    	<textarea  class='span8 editor' rows = '8' id="id_content" name="content"> </textarea>
+	 </div>
+	</div>
+    <input class='btn' type="submit" value="回复" />
+  </form>
+</div><!--inner reply-->
+</div> <!--panel-->
+
+  
+  
+</div>
+
+
+<script src="http://cnodejs.qiniudn.com/public/fancebox.min.81d92ecc.js"></script>
+<link rel="stylesheet" href="http://cnodejs.qiniudn.com/public/libs/fancybox/fancebox.min.a4966e97.css" media="all" />
+
+
+      </div>
+    </div>
+
+{%endblock%}
+
+

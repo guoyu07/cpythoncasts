@@ -1,0 +1,134 @@
+
+{%extends "layout_qa.html" %}
+
+
+
+{%block content%}
+
+<div id="content">
+  <div class="panel">
+    <div class="inner">
+      <div class="header clearfix">
+        当前话题
+       	{%if user.username%} 
+	<a class='btn btn-primary' style='margin-left: 600px ' href = {% url 'questions-add'%}>新话题</a>
+	{%endif%}
+      </div>
+      
+      <div id="topic_list">
+
+
+
+{% for i in object_list %}
+<div class='cell'>
+  <div class='user_avatar block'>
+      <a href="/user/ringtail">
+        <img src="http://cnodegravatar.u.qiniudn.com/avatar/84b09f7cdd36649cff8620138cb61c0b?size=48"
+          title="ringtail"/>
+      </a>
+  </div>
+  <div class='block count'>
+    <a href={%url 'questions-read' i.id %} title="回复数">{{i.counts}}</a
+      >/<span title='点击数'>156</span>
+  </div>
+  <div class='topic_wrap'>
+    <a class='' href={%url 'questions-read' i.id%}>
+     {{i.title}}
+    </a>
+  </div>
+    <div class='last_time'>
+    {%if i.author.id == user.id %}
+    <a class='btn btn-warning' href = {% url 'questions-update' i.id %}>改</a>
+    <a class='btn btn-danger' href = {% url 'questions-del' i.id %}>删</a>
+    {%endif%}
+    {{i.cd}}
+    </div>
+</div>
+{% endfor %}
+
+</div>
+<div class='pagination' current_page='1'>
+	<ul>
+		
+		
+			<li class='disabled'><a>«</a></li>
+		
+
+		 
+
+		
+
+		
+			
+				<li class='disabled'><a>1</a></li>
+			
+		
+			
+				<li><a href=''>2</a></li>
+			
+		
+			
+				<li><a href=''>3</a></li>
+			
+		
+			
+				<li><a href=''>4</a></li>
+			
+		
+			
+				<li><a href=''>5</a></li>
+			
+		
+
+		
+			<li><a>...</a></li>
+		
+
+		
+			<li><a href=''>»</a></li>
+		
+	</ul>
+</div>
+
+
+<script>
+	$(document).ready(function () {
+		var $nav = $('.pagination');
+		var current_page = $nav.attr('current_page');	
+		if (current_page) {
+			$nav.find('li').each(function(){
+				var $li = $(this);
+				var $a = $li.find('a');
+				if($a.html() == current_page){
+					$li.addClass('active');
+					$a.removeAttr('href');
+				}
+			});
+		}
+	});
+</script>
+
+{%endblock%}      
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div id='backtotop'>回到顶部</div>
+    <div id='footer'>
+      <div id='footer_main'>
+        <div class="links">
+          <a class='dark' href='/about'><strong>关于</strong></a>
+          |
+          <a class='dark' href='/faq'><strong>FAQ</strong></a>
+          |
+          <a class='dark' href='/rss' target="_blank"><strong>RSS</strong></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+

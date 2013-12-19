@@ -113,7 +113,7 @@ class VideoView:
                 model         = Video
 		template_name = "account/set_confirm_delete.html" 
                 success_url   = reverse_lazy('set_video_list')
-		def get_getobject(self):
+		def get_object(self):
 			info       = set_common(self.request)
 			objects    = Video.objects.filter(id=self.kwargs.get('pk'),\
 					user=self.request.user)

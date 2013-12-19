@@ -25,6 +25,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^setting/',include('setting.urls')),
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^qa/', include('qa.urls')),
 #以下是主页页面等信息
     url(r'^$',unify),
     url(r'^videos/$', unifyallvideos),
