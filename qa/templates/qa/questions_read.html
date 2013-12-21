@@ -61,7 +61,7 @@
       <hr>
       <div class='topic_content'>
         <div class="markdown-text">
-	{{q.content}}
+	{{q.content|linebreaks}}
 	</div>
       </div>
       <hr>
@@ -118,7 +118,7 @@
   <div class='reply_content'>
   <div class="markdown-text">
 	{%if q.counts >= q.min_people %} 
-		{{i.content}}
+		{{i.content|linebreaks}}
 	{%else%} 
 		回复人数不够，内容不可见 
 	{%endif%}
@@ -136,6 +136,7 @@
 
   </div>
 
+ {%if user.username%} 
   <div class='panel'>
     <div class='header'>
       <span class='col_fade'>添加回复</span>
@@ -153,7 +154,7 @@
   </form>
 </div><!--inner reply-->
 </div> <!--panel-->
-
+ {%endif%}
   
   
 </div>
