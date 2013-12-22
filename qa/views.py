@@ -27,15 +27,20 @@ class ACreateView(CreateView):
 	model  = Answers
 	fields = ['content']
         def form_valid(self,form):
-               form.instance.author     = self.request.user
-	       form.instance.questionid = self.kwargs.get('pk')
 
 	       questionid               = self.kwargs.get('pk')
-	       q = Questions.objects.get(id=questionid)
-	       q.counts += 1
-	       q.save()
+	       try:
+		  Answers.objects.get(author=self.request.user,
+					questionid=questionid)	
+	       except:
+               	  form.instance.author     = self.request.user
+	       	  form.instance.questionid = self.kwargs.get('pk')
 
-               super(ACreateView, self).form_valid(form)
+	          q = Questions.objects.get(id=questionid)
+	          q.counts += 1
+	          q.save()
+
+                  super(ACreateView, self).form_valid(form)
                return HttpResponseRedirect(reverse('questions-read',args=(questionid,)) )
 
 
