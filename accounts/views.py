@@ -10,7 +10,6 @@ from django.contrib.auth import authenticate, login
 from django.core.urlresolvers import reverse_lazy
 
 from cpythoncasts.models import *
-from exam.models import *
 
 
 
