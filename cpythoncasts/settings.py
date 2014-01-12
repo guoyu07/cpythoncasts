@@ -144,9 +144,7 @@ DJANGO_APPS=(
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
-THIRD_PART_APPS=(
-    #'bootstrap_admin',
-)
+
 LOCAL_APPS=(
     'cpythoncasts',
     'accounts',
@@ -154,7 +152,7 @@ LOCAL_APPS=(
     'setting',
     'qa',
 )
-INSTALLED_APPS = DJANGO_APPS + THIRD_PART_APPS + LOCAL_APPS
+INSTALLED_APPS = DJANGO_APPS +  LOCAL_APPS
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

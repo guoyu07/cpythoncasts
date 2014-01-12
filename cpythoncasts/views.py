@@ -18,22 +18,31 @@ def get_retdata(active=None):
 		retdata[active] ='active'
 	return retdata
 
+def make_model_count(model,count,part=None):
+        name = model._meta.object_name.lower()
+        db   = model.objects.all().order_by('-id')[:count]
+        d = {}
+
+        d[name+"count"] = len(db)
+
+
+        if part != None:
+                l = (count + part) / part
+                for i in range(0,l):
+                        d["object_"+name + str(i)] = db[i * part:i * part +part]
+        else:
+                d["object_"+name] = db
+        return d
+
 
 def unify(request):#unify主页
     retdata = get_retdata('unify')
     retdata['username'] = request.user.username
     retdata['id']       = request.user.id
-    try:
-    	new1   = Video.objects.get(keyword='new1')
-    	retdata['new1'] = new1
-    	new2   = Video.objects.get(keyword='new2')
-    	retdata['new2'] = new2
-    	new3   = Video.objects.get(keyword='new2')
-    	retdata['new3'] = new3
-    	new4   = Video.objects.get(keyword='new4')
-    	retdata['new4'] = new4
-    except:
-	pass
+
+    d1 = make_model_count(Video,4)
+
+    retdata.update(d1)
 
     return render_to_response("unify.html",retdata) 
 
