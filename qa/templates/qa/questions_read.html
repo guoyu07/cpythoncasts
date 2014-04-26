@@ -61,7 +61,7 @@
       <hr>
       <div class='topic_content'>
         <div class="markdown-text">
-	{{q.content|linebreaks}}
+	{{q.content|safe}}
 	</div>
       </div>
       <hr>
@@ -118,7 +118,7 @@
   <div class='reply_content'>
   <div class="markdown-text">
 	{%if q.counts >= q.min_people %} 
-		{{i.content|linebreaks}}
+		{{i.content|safe}}
 	{%else%} 
 		回复人数不够，内容不可见 
 	{%endif%}
